@@ -5,17 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MacBreeze — You'll never think about your fans again</title>
 <meta name="description" content="MacBreeze is a fan control app for MacBook that manages your fans automatically — per-app profiles, safe overheat protection, and full manual control when you want it.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="rotating-text.css">
+<link rel="stylesheet" href="sections/nav-hero.css">
+<link rel="stylesheet" href="sections/features.css">
+<link rel="stylesheet" href="sections/showcase.css">
+<link rel="stylesheet" href="sections/pricing.css">
+<link rel="stylesheet" href="sections/compare.css">
+<link rel="stylesheet" href="sections/faq.css">
+<link rel="stylesheet" href="sections/footer.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand">
-      <span class="brand-dot"></span>
+    <a href="#hero" class="nav-brand">
+      <span class="nav-brand-dot" aria-hidden="true"></span>
       MacBreeze
-    </div>
-    <nav>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
       <a href="#pricing" class="nav-cta">Get MacBreeze</a>
@@ -23,13 +33,12 @@
   </div>
 </header>
 
-<section class="hero">
+<section id="hero" class="hero">
   <div class="hero-inner">
-    <h1>You'll never think<br>about your fans again.</h1>
-    <p class="subhead">
-      MacBreeze watches your Mac and manages its fans for you — quiet during
-      a video call, full speed the moment Final Cut needs it, and a safety
-      net that keeps your Mac cool no matter what you're running.
+    <h1 class="hero-headline">You'll never think about your <span class="hero-accent">fans</span> again.</h1>
+    <p class="hero-subhead">
+      MacBreeze watches your CPU, GPU, and battery, then manages your fans
+      automatically — quiet on a call, full speed the moment it's needed.
     </p>
     <div class="hero-ctas">
       <a href="#pricing" class="btn btn-primary">Get MacBreeze — $15</a>
@@ -38,141 +47,361 @@
     <p class="hero-note">macOS 14 Sonoma or later · Apple Silicon</p>
   </div>
 
-  <div class="mockup">
-    <img src="images/dashboard.png" alt="MacBreeze dashboard showing CPU, GPU, Wi-Fi, battery, and energy readouts, plus live temperature-to-speed curves for both fans" class="screenshot">
+  <div class="hero-mockup">
+    <img
+      src="images/dashboard.png"
+      alt="MacBreeze dashboard showing CPU, GPU, Wi-Fi, battery, and energy readouts, plus live temperature-to-speed curves for both fans"
+      class="hero-screenshot reveal"
+    >
   </div>
 </section>
 
-<section class="logos">
-  <p>Built for the way you actually use your Mac — editing, gaming, compiling, or just browsing with 40 tabs open.</p>
+<section id="features" class="features">
+  <div class="features-inner">
+    <h2 class="features-heading">Everything your fans need. Nothing you have to manage.</h2>
+
+    <div class="features-grid">
+      <div class="card features-card reveal d1">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="2" y="8" width="20" height="8" rx="4" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="16" cy="12" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Per-app automation</h3>
+        <p>Assign a fan profile to any app. It switches automatically the moment that app opens or quits. Free includes 1 automation and 2 profile slots — Pro is unlimited, with priority ordering when profiles overlap.</p>
+      </div>
+
+      <div class="card features-card reveal d2">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <polyline points="3,16 8,12 12,14 16,7 21,4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="3" y1="20" x2="21" y2="20" stroke="currentColor" stroke-width="1.4" opacity="0.35"/>
+          </svg>
+        </div>
+        <h3>Visual fan curves <span class="features-pro-tag">Pro</span></h3>
+        <p>Drag points on a live temperature-to-speed graph and watch it respond to your CPU, GPU, and battery in real time.</p>
+      </div>
+
+      <div class="card features-card reveal d3">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="12" y1="13" x2="12" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="12" cy="13" r="1.3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Auto-Blast safety net</h3>
+        <p>If things get too hot, MacBreeze locks your fans at full speed automatically, then eases back down once it's genuinely safe again. Free, always.</p>
+      </div>
+
+      <div class="card features-card reveal d1">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="2" y="7" width="17" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <rect x="20" y="10" width="2" height="4" rx="1" fill="currentColor"/>
+            <rect x="5" y="10" width="4" height="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Power-aware profiles <span class="features-pro-tag">Pro</span></h3>
+        <p>Quiet on battery, more aggressive on AC power — switching automatically the instant you plug in or unplug.</p>
+      </div>
+
+      <div class="card features-card reveal d2">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="3" y="12" width="3.5" height="8" rx="1" fill="currentColor"/>
+            <rect x="10.25" y="6" width="3.5" height="14" rx="1" fill="currentColor"/>
+            <rect x="17.5" y="9" width="3.5" height="11" rx="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Full sensor monitoring</h3>
+        <p>CPU, GPU, battery, per-core temperatures, and live energy draw — measured and shown right in your menu bar. Free, always.</p>
+      </div>
+
+      <div class="card features-card reveal d3">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="9" y1="2" x2="9" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="15" y1="2" x2="15" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="9" y1="18" x2="9" y2="22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="15" y1="18" x2="15" y2="22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="2" y1="9" x2="6" y2="9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="2" y1="15" x2="6" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="18" y1="9" x2="22" y2="9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="18" y1="15" x2="22" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Works on every Apple Silicon Mac</h3>
+        <p>MacBreeze detects your hardware automatically, including fanless MacBook Air and Neo models, which get a free monitoring-only view.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="features" class="features">
-  <h2>Everything your fans need. Nothing you have to babysit.</h2>
-
-  <div class="feature-grid">
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Per-app automation</h3>
-      <p>Assign a fan profile to any app. MacBreeze switches automatically the instant it's frontmost or running — no manual toggling, ever.</p>
+<section id="app-profiles" class="showcase">
+  <div class="showcase-inner">
+    <div class="showcase-copy reveal">
+      <h2>Set it once. It runs itself.</h2>
+      <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. The moment that app launches, MacBreeze switches to its profile automatically, and switches back the moment you quit. No manual toggling, nothing to remember.</p>
+      <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, with priority ordering when more than one could apply.</p>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">📈</div>
-      <h3>Visual fan curves</h3>
-      <p>Drag points on a live temperature → speed graph. Watch the curve respond to your CPU, GPU, and battery in real time.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔥</div>
-      <h3>Auto-Blast safety net</h3>
-      <p>If things get too hot, MacBreeze locks your fans at full speed automatically — with a smooth ease-down once it's genuinely safe. Free, always.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔋</div>
-      <h3>Power-aware profiles</h3>
-      <p>Quiet on battery, aggressive on AC — switched automatically the moment you plug or unplug.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌡️</div>
-      <h3>Full sensor monitoring</h3>
-      <p>CPU, GPU, battery, per-core temps, and live energy draw — measured, not guessed, right in your menu bar.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🖥️</div>
-      <h3>Works on every Apple Silicon Mac</h3>
-      <p>Two fans, one fan, or none — MacBreeze detects your hardware automatically on any Apple Silicon MacBook, including the fanless MacBook Air and Neo.</p>
-    </div>
+    <img
+      src="images/app-profiles.png"
+      alt="MacBreeze automatically switching to a per-app fan profile the moment an app launches"
+      class="showcase-screenshot reveal d2"
+    >
   </div>
 </section>
 
 <section id="pricing" class="pricing">
-  <h2>Simple pricing. No subscription.</h2>
-  <p class="pricing-sub">Pay once, own it forever. Free monitoring for everyone, even on fanless Macs.</p>
+  <div class="pricing-inner">
+    <h2 class="pricing-heading">Simple pricing. Own it once.</h2>
+    <p class="pricing-subhead">No subscription. Full sensor monitoring stays free for everyone, even on fanless Macs — these two plans unlock fan control.</p>
+    <p class="pricing-fun" id="pricing-fun-mount"></p>
 
-  <div class="pricing-grid">
-    <div class="price-card">
-      <h3>Free</h3>
-      <div class="price">$0</div>
-      <p class="price-tagline">Full monitoring, always</p>
-      <ul>
-        <li>Menu bar temperature</li>
-        <li>CPU / GPU / battery / per-core sensors</li>
-        <li>Live energy draw</li>
-        <li>Manual fan speed control</li>
-        <li>Blast mode + Auto-Blast safety net</li>
-        <li>1 profile, 1 app automation</li>
-      </ul>
-      <a href="#" class="btn btn-ghost btn-block download-link">Download free</a>
+    <div class="pricing-grid">
+      <div class="card pricing-card pricing-card-featured reveal d1">
+        <span class="pricing-badge">Most popular</span>
+        <h3 class="pricing-plan">Pro</h3>
+        <p class="pricing-price"><span class="pricing-price-amount">$15</span></p>
+        <p class="pricing-tagline">One Mac, forever.</p>
+
+        <ul class="pricing-features">
+          <li>Full monitoring, manual fan control, and Auto-Blast</li>
+          <li>Visual sensor curves — drag temperature-to-speed graphs</li>
+          <li>Unlimited fan profiles</li>
+          <li>Unlimited per-app automations, with priority ordering</li>
+          <li>Power-aware switching between AC and battery</li>
+          <li>Custom overheat threshold</li>
+          <li>14-day free trial, no card required</li>
+        </ul>
+
+        <a href="#" class="btn btn-primary btn-block buy-link pricing-cta" data-product="single">Get MacBreeze Pro</a>
+      </div>
+
+      <div class="card pricing-card reveal d2">
+        <h3 class="pricing-plan">4-Pack</h3>
+        <p class="pricing-price"><span class="pricing-price-amount">$45</span></p>
+        <p class="pricing-tagline">Up to 4 Macs at once.</p>
+
+        <ul class="pricing-features">
+          <li>Everything in Pro</li>
+          <li>Covers up to 4 Macs at the same time</li>
+          <li>Ideal for a household or a small team</li>
+        </ul>
+
+        <a href="#" class="btn btn-ghost btn-block buy-link pricing-cta" data-product="pack4">Get the 4-pack</a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="price-card price-card-featured">
-      <div class="price-badge">Most popular</div>
-      <h3>Pro</h3>
-      <div class="price">$15</div>
-      <p class="price-tagline">One Mac, forever</p>
-      <ul>
-        <li>Everything in Free</li>
-        <li>Visual fan curves (Sensor mode)</li>
-        <li>Unlimited profiles, switchable from the menu bar</li>
-        <li>Unlimited per-app automations, with priority ordering</li>
-        <li>Power-aware AC / battery switching</li>
-        <li>Custom overheat notifications</li>
-        <li>14-day free trial, no card required</li>
-      </ul>
-      <a href="#" class="btn btn-primary btn-block buy-link" data-product="single">Buy Pro — $15</a>
-    </div>
+<section id="compare" class="compare">
+  <div class="compare-inner">
+    <h2 class="compare-heading" id="compare-heading">Free vs. Pro</h2>
+    <p class="compare-subhead">Every feature, side by side.</p>
 
-    <div class="price-card">
-      <h3>Make your friends cooler!</h3>
-      <div class="price">$45</div>
-      <p class="price-tagline">4 Macs for the price of 3</p>
-      <ul>
-        <li>Everything in Pro</li>
-        <li>Use on up to 4 Macs at the same time</li>
-        <li>Perfect for your whole family or team</li>
-        <li>Share the love (and the fan curves)</li>
-      </ul>
-      <a href="#" class="btn btn-ghost btn-block buy-link" data-product="pack4">Buy 4-pack — $45</a>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table" aria-labelledby="compare-heading">
+        <thead>
+          <tr>
+            <th scope="col" class="compare-th-feature"><span class="compare-sr-only">Feature</span></th>
+            <th scope="col">Free</th>
+            <th scope="col" class="compare-th-pro">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="compare-row">
+            <th scope="row">Full sensor monitoring &amp; menu bar readout</th>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Fanless Mac experience</th>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Manual fan control</th>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Blast mode &amp; Auto-Blast safety net</th>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Profiles</th>
+            <td class="compare-cell-text">2 slots</td>
+            <td class="compare-cell-text compare-cell-pro">Unlimited</td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Per-app automations</th>
+            <td class="compare-cell-text">1 active</td>
+            <td class="compare-cell-text compare-cell-pro">Unlimited</td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Visual sensor curves</th>
+            <td>
+              <span class="compare-icon compare-icon-no" aria-hidden="true"></span>
+              <span class="compare-sr-only">Not included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Power-aware AC / battery profiles</th>
+            <td>
+              <span class="compare-icon compare-icon-no" aria-hidden="true"></span>
+              <span class="compare-sr-only">Not included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+          <tr class="compare-row">
+            <th scope="row">Overheat notifications, custom threshold</th>
+            <td>
+              <span class="compare-icon compare-icon-no" aria-hidden="true"></span>
+              <span class="compare-sr-only">Not included</span>
+            </td>
+            <td>
+              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
+              <span class="compare-sr-only">Included</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
 <section id="faq" class="faq">
-  <h2>Questions</h2>
+  <div class="faq-inner">
+    <h2 class="faq-heading">Frequently asked questions</h2>
+    <p class="faq-subhead">The details people usually ask about before they buy.</p>
 
-  <details>
-    <summary>Does MacBreeze need admin access?</summary>
-    <p>Controlling fan speed requires a small privileged helper (macOS's standard way of allowing safe, limited hardware access). MacBreeze installs it with one click and one password prompt — the same dialog you'd see installing any Mac utility. Monitoring alone needs no special access at all.</p>
-  </details>
-  <details>
-    <summary>Is it safe to let an app control my fans?</summary>
-    <p>Yes. MacBreeze never lets your Mac overheat: built-in safety overrides force high fan speed above 80°C and 90°C regardless of your settings, and Auto-Blast locks fans at full speed until it's genuinely safe to ease off — a safeguard that's free for every user, paid or not.</p>
-  </details>
-  <details>
-    <summary>What happens after my trial ends?</summary>
-    <p>MacBreeze drops to the Free tier — monitoring, manual control, and Blast mode keep working. Nothing you configured is deleted; your curves, profiles, and automations are saved and unlock instantly if you purchase later.</p>
-  </details>
-  <details>
-    <summary>Can I move my license to a new Mac?</summary>
-    <p>Your license works on one Mac at a time. Switching to a new MacBook is free — just sign in there, as many times as you like, as long as you're online to check in. If you'd rather link your license permanently to one Mac (so it also works fully offline), that's available too — but it's irreversible: moving to a different MacBook after that means buying Pro again.</p>
-  </details>
-  <details>
-    <summary>Does this work on MacBook Air or the fanless MacBook Neo?</summary>
-    <p>Yes — MacBreeze detects fanless Macs automatically and switches to a monitoring-only view. It's fully free on those machines, since there are no fans to control.</p>
-  </details>
+    <div class="faq-list reveal">
+      <div class="faq-item" data-state="closed">
+        <h3 class="faq-trigger-wrap">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Does MacBreeze need admin access?</span>
+            <span class="faq-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+          </button>
+        </h3>
+        <div class="faq-content-wrap">
+          <div class="faq-content-inner">
+            <p>Controlling fan speed needs a small privileged helper — macOS's standard way of allowing safe, limited hardware access. MacBreeze installs it with one click and one password prompt, the same dialog you'd see installing any Mac utility. Monitoring alone needs no special access at all.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-state="closed">
+        <h3 class="faq-trigger-wrap">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Is it safe to let an app control my fans?</span>
+            <span class="faq-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+          </button>
+        </h3>
+        <div class="faq-content-wrap">
+          <div class="faq-content-inner">
+            <p>Yes. A safety cap is built in and always on: the target temperature tops out at 95°C, and if your Mac reaches it, Auto-Blast runs the fans at full speed until it cools to 85°C. That safeguard is included for every user.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-state="closed">
+        <h3 class="faq-trigger-wrap">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What happens after my trial ends?</span>
+            <span class="faq-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+          </button>
+        </h3>
+        <div class="faq-content-wrap">
+          <div class="faq-content-inner">
+            <p>MacBreeze drops to the Free tier. Full monitoring, manual fan control, and Auto-Blast keep working. You keep 2 profile slots and 1 active automation; anything beyond that is locked, not deleted, and unlocks instantly the moment you buy Pro.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-state="closed">
+        <h3 class="faq-trigger-wrap">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Can I move my license to a new Mac?</span>
+            <span class="faq-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+          </button>
+        </h3>
+        <div class="faq-content-wrap">
+          <div class="faq-content-inner">
+            <p>Your license works on one Mac at a time, and moving it is free — just sign in on the new machine, as often as you like, as long as it can check in online. You can also link a license permanently to one Mac for full offline use, but that's irreversible: moving to a different Mac afterward means buying Pro again.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-state="closed">
+        <h3 class="faq-trigger-wrap">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Does this work on MacBook Air or the fanless MacBook Neo?</span>
+            <span class="faq-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span>
+          </button>
+        </h3>
+        <div class="faq-content-wrap">
+          <div class="faq-content-inner">
+            <p>Yes. MacBreeze detects fanless Macs automatically and switches to a monitoring-only view. Since there are no fans to control, it's fully free on those machines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer class="footer">
   <div class="footer-inner">
-    <div class="brand"><span class="brand-dot"></span>MacBreeze</div>
-    <p>© <span id="year"></span> MacBreeze. Built for MacBook.</p>
-    <div class="footer-links">
+    <a href="#hero" class="footer-brand" aria-label="MacBreeze home">
+      <span class="footer-brand-dot" aria-hidden="true"></span>
+      MacBreeze
+    </a>
+
+    <p class="footer-copyright">© <span id="year"></span> MacBreeze. Built for MacBook.</p>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
       <a href="mailto:support@example.com">Support</a>
-      <a href="#faq">FAQ</a>
-      <a href="#pricing">Pricing</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script src="rotating-text.js"></script>
 </body>
 </html>

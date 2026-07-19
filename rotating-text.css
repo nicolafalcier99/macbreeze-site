@@ -1,0 +1,30 @@
+.text-rotate-line {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  justify-content: center;
+}
+
+.text-rotate {
+  display: inline-flex;
+  align-items: baseline;
+  flex: none;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.text-rotate-word {
+  display: inline-flex;
+}
+
+.text-rotate-element {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-rotate-element { transition: opacity 0.2s ease; }
+}
