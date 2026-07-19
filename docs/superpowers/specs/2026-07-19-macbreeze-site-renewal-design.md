@@ -44,6 +44,14 @@ Deliverable: `tokens.css` + short `design-brief.md`, both handed identically to 
 - Drop entirely: `border-glow`, `spotlight-card` — neon green/cyan hover glow conflicts with light/clean direction.
 - Responsive: extend the existing breakpoints (900px / 760px / 600px in `style.css`), don't replace the approach.
 
+## Shared JS contract (must preserve)
+
+`script.js` is a single shared file, not owned by any one section agent, and selects elements by exact class/attribute. Every Phase 1a agent may restyle freely but must keep these hooks intact (or, if a hook genuinely must change, say so explicitly in that agent's `notes.md` so the main thread updates `script.js` at merge time instead of it silently breaking):
+- `#year` — footer copyright year
+- `.reveal`, `.d1`–`.d5`, `.in` — scroll-reveal system (any element that wants the effect keeps these classes)
+- `.faq-item[data-state]`, `.faq-trigger[aria-expanded]` — accordion behavior
+- `.buy-link[data-product]`, `.download-link` — placeholder click handlers
+
 ## Agent architecture
 
 Model for every agent: Sonnet 5. Main thread is the manager: writes Phase 0, dispatches, collects, merges, resolves conflicts, runs verification. Isolation mechanism: one git worktree per agent (via `using-git-worktrees`) so concurrent agents never touch the same working files — this is what makes true parallelism safe here, as opposed to 10 agents editing the live `index.html`/`style.css` directly.
