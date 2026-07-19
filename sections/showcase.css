@@ -1,0 +1,48 @@
+/* Showcase — per-app automation ("Set it once. It runs itself.") */
+.showcase {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-4);
+}
+
+.showcase-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.showcase-copy h2 {
+  font-size: var(--font-size-h2);
+  line-height: 1.15;
+  margin: 0 0 var(--space-3);
+}
+
+.showcase-lead {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.showcase-note {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+}
+
+.showcase-screenshot {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+/* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
+@media (max-width: 900px) {
+  .showcase-inner {
+    grid-template-columns: 1fr;
+  }
+}
