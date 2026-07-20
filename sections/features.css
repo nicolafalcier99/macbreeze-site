@@ -79,6 +79,9 @@
   }
 }
 @media (max-width: 600px) {
+  .features {
+    padding: var(--space-6) var(--space-3);
+  }
   .features-grid {
     grid-template-columns: 1fr;
   }
