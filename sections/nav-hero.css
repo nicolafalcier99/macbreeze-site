@@ -30,7 +30,7 @@
   height: 9px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.12);
+  box-shadow: 0 0 0 4px rgba(0, 104, 204, 0.12);
 }
 .nav-links {
   display: flex;

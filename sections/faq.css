@@ -83,10 +83,13 @@
 .faq-content-wrap {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
+  visibility: hidden;
+  transition: grid-template-rows 0.3s ease, visibility 0s linear 0.3s;
 }
 .faq-item[data-state="open"] .faq-content-wrap {
   grid-template-rows: 1fr;
+  visibility: visible;
+  transition: grid-template-rows 0.3s ease, visibility 0s linear 0s;
 }
 
 .faq-content-inner {
