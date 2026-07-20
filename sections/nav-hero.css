@@ -135,6 +135,12 @@
   .nav-links a:not(.nav-cta) {
     display: none;
   }
+  /* Only the CTA remains visible at this width — give it a taller
+     tap target now that it's the sole nav action on touch devices. */
+  .nav-links a.nav-cta {
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
   .hero {
     padding-top: var(--space-5);
   }
