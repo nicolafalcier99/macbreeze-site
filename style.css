@@ -25,6 +25,11 @@ html {
     scroll-behavior: auto;
   }
 }
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 84px; /* nav CTA grows to a 48px tap target at this width */
+  }
+}
 
 .pricing-fun {
   margin: var(--space-3) 0 0;
