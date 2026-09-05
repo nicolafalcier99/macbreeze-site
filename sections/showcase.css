@@ -40,6 +40,95 @@
   box-shadow: var(--shadow-card);
 }
 
+/* Showcase diagram — apps -> profile -> fans, in place of a screenshot */
+.showcase-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
+}
+
+.diagram-apps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.diagram-app-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.diagram-app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: var(--chip-color, var(--color-accent));
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.diagram-arrow {
+  width: 22px;
+  height: 22px;
+  color: var(--color-text-tertiary);
+}
+.diagram-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.diagram-result {
+  width: 100%;
+  text-align: center;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.diagram-result-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto var(--space-2);
+}
+.diagram-result-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.diagram-result-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.diagram-result-note {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
 /* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
 @media (max-width: 900px) {
   .showcase-inner {
@@ -49,5 +138,8 @@
 @media (max-width: 600px) {
   .showcase {
     padding: var(--space-6) var(--space-3);
+  }
+  .diagram-apps {
+    grid-template-columns: 1fr;
   }
 }

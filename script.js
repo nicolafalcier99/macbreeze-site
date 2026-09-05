@@ -43,3 +43,16 @@ document.querySelectorAll(".download-link").forEach((el) => {
     alert("Download link goes here once a release build is published.");
   });
 });
+
+document.querySelectorAll(".tour-tab").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tour;
+    document.querySelectorAll(".tour-tab").forEach((t) => {
+      t.classList.toggle("active", t === tab);
+      t.setAttribute("aria-selected", t === tab ? "true" : "false");
+    });
+    document.querySelectorAll(".tour-image").forEach((img) => {
+      img.hidden = img.dataset.tourImage !== target;
+    });
+  });
+});

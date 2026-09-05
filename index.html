@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MacBreeze — You'll never think about your fans again</title>
+<title>MacBreeze</title>
 <meta name="description" content="MacBreeze is a fan control app for MacBook that manages your fans automatically — per-app profiles, safe overheat protection, and full manual control when you want it.">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="tokens.css">
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="sections/nav-hero.css">
 <link rel="stylesheet" href="sections/features.css">
 <link rel="stylesheet" href="sections/showcase.css">
+<link rel="stylesheet" href="sections/tour.css">
 <link rel="stylesheet" href="sections/pricing.css">
 <link rel="stylesheet" href="sections/compare.css">
 <link rel="stylesheet" href="sections/faq.css">
@@ -22,7 +23,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="#hero" class="nav-brand">
-      <span class="nav-brand-dot" aria-hidden="true"></span>
+      <span class="nav-brand-mark" aria-hidden="true"></span>
       MacBreeze
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -52,7 +53,7 @@
   <div class="hero-mockup">
     <img
       src="images/dashboard.png"
-      alt="MacBreeze dashboard showing CPU, GPU, Wi-Fi, battery, and energy readouts, plus live temperature-to-speed curves for both fans"
+      alt="MacBreeze dashboard showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans"
       class="hero-screenshot reveal"
     >
   </div>
@@ -88,6 +89,18 @@
       <div class="card features-card reveal d3">
         <div class="features-icon">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="4" y="4" width="16" height="5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <rect x="4" y="10.5" width="16" height="5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <rect x="4" y="17" width="10" height="3.5" rx="1.75" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Fan profiles</h3>
+        <p>Save named speed profiles for gaming, calls, or rendering, then switch between them instantly. Free includes 2 slots, Pro is unlimited.</p>
+      </div>
+
+      <div class="card features-card reveal d1">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.6"/>
             <line x1="12" y1="13" x2="12" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
             <circle cx="12" cy="13" r="1.3" fill="currentColor"/>
@@ -95,18 +108,6 @@
         </div>
         <h3>Auto-Blast safety net</h3>
         <p>If things get too hot, MacBreeze locks your fans at full speed automatically, then eases back down once it's genuinely safe again. Free, always.</p>
-      </div>
-
-      <div class="card features-card reveal d1">
-        <div class="features-icon">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-            <rect x="2" y="7" width="17" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
-            <rect x="20" y="10" width="2" height="4" rx="1" fill="currentColor"/>
-            <rect x="5" y="10" width="4" height="4" fill="currentColor"/>
-          </svg>
-        </div>
-        <h3>Power-aware profiles <span class="features-pro-tag">Pro</span></h3>
-        <p>Quiet on battery, more aggressive on AC power — switching automatically the instant you plug in or unplug.</p>
       </div>
 
       <div class="card features-card reveal d2">
@@ -149,11 +150,65 @@
       <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. The moment that app launches, MacBreeze switches to its profile automatically, and switches back the moment you quit. No manual toggling, nothing to remember.</p>
       <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, with priority ordering when more than one could apply.</p>
     </div>
-    <img
-      src="images/app-profiles.png"
-      alt="MacBreeze automatically switching to a per-app fan profile the moment an app launches"
-      class="showcase-screenshot reveal d2"
-    >
+    <div class="showcase-diagram reveal d2">
+      <div class="diagram-apps">
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #9A7FEA;">Pr</span>Premiere Pro</div>
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #2D9CDB;">DR</span>DaVinci Resolve</div>
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #31A8FF;">Ps</span>Photoshop</div>
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #707070;">FC</span>Final Cut Pro</div>
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #3A3A98;">Ae</span>After Effects</div>
+        <div class="diagram-app-chip"><span class="diagram-app-icon" style="--chip-color: #F5792A;">Bl</span>Blender</div>
+      </div>
+      <div class="diagram-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false">
+          <path d="M12 3v16m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="diagram-result">
+        <div class="diagram-result-icon">
+          <img src="images/logo-color.png" alt="" aria-hidden="true">
+        </div>
+        <p class="diagram-result-title">Profile switches automatically</p>
+        <p class="diagram-result-note">Fans ramp to match the moment the app opens, then ease back the instant you quit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tour" class="tour">
+  <div class="tour-inner">
+    <h2 class="tour-heading reveal">A closer look inside MacBreeze.</h2>
+    <div class="tour-layout">
+      <div class="tour-tabs reveal" role="tablist" aria-label="App views">
+        <button class="tour-tab active" data-tour="overview" role="tab" aria-selected="true">
+          <span class="tour-tab-title">Overview</span>
+          <span class="tour-tab-desc">Live temps, fan RPMs, and mode — all in one glance.</span>
+        </button>
+        <button class="tour-tab" data-tour="profiles" role="tab" aria-selected="false">
+          <span class="tour-tab-title">Profiles</span>
+          <span class="tour-tab-desc">Named speed presets you can switch between instantly.</span>
+        </button>
+        <button class="tour-tab" data-tour="automations" role="tab" aria-selected="false">
+          <span class="tour-tab-title">App Automations</span>
+          <span class="tour-tab-desc">Drop in an app, set its fan behavior, done.</span>
+        </button>
+        <button class="tour-tab" data-tour="safety" role="tab" aria-selected="false">
+          <span class="tour-tab-title">Safety</span>
+          <span class="tour-tab-desc">Auto-Blast trigger and overheat alerts, tuned to your taste.</span>
+        </button>
+        <button class="tour-tab" data-tour="preferences" role="tab" aria-selected="false">
+          <span class="tour-tab-title">Preferences</span>
+          <span class="tour-tab-desc">Units, menu bar display, and startup behavior.</span>
+        </button>
+      </div>
+      <div class="tour-viewer reveal d2">
+        <img src="images/tour-overview.png" alt="MacBreeze Overview tab showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans" class="tour-image" data-tour-image="overview">
+        <img src="images/tour-profiles.png" alt="MacBreeze Profiles tab showing Default, Quiet, and AI - LLM speed profiles" class="tour-image" data-tour-image="profiles" hidden>
+        <img src="images/tour-automations.png" alt="MacBreeze App Automations tab showing DaVinci Resolve and Affinity with per-app fan behavior" class="tour-image" data-tour-image="automations" hidden>
+        <img src="images/tour-safety.png" alt="MacBreeze Safety tab showing the Auto-Blast trigger temperature and overheat notification settings" class="tour-image" data-tour-image="safety" hidden>
+        <img src="images/tour-preferences.png" alt="MacBreeze Preferences tab showing temperature units, menu bar display, and startup options" class="tour-image" data-tour-image="preferences" hidden>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -175,7 +230,6 @@
           <li>Visual sensor curves — drag temperature-to-speed graphs</li>
           <li>Unlimited fan profiles</li>
           <li>Unlimited per-app automations, with priority ordering</li>
-          <li>Power-aware switching between AC and battery</li>
           <li>Custom overheat threshold</li>
           <li>14-day free trial, no card required</li>
         </ul>
@@ -185,8 +239,8 @@
 
       <div class="card pricing-card reveal d2">
         <h3 class="pricing-plan">4-Pack</h3>
-        <p class="pricing-price"><span class="pricing-price-amount">$45</span></p>
-        <p class="pricing-tagline">Up to 4 Macs at once.</p>
+        <p class="pricing-price"><span class="pricing-price-original">$60</span><span class="pricing-price-amount">$45</span></p>
+        <p class="pricing-tagline">Up to 4 Macs at once — 4 for the price of 3.</p>
 
         <ul class="pricing-features">
           <li>Everything in Pro</li>
@@ -271,17 +325,6 @@
           </tr>
           <tr class="compare-row">
             <th scope="row">Visual sensor curves</th>
-            <td>
-              <span class="compare-icon compare-icon-no" aria-hidden="true"></span>
-              <span class="compare-sr-only">Not included</span>
-            </td>
-            <td>
-              <span class="compare-icon compare-icon-yes" aria-hidden="true"></span>
-              <span class="compare-sr-only">Included</span>
-            </td>
-          </tr>
-          <tr class="compare-row">
-            <th scope="row">Power-aware AC / battery profiles</th>
             <td>
               <span class="compare-icon compare-icon-no" aria-hidden="true"></span>
               <span class="compare-sr-only">Not included</span>
@@ -392,7 +435,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <a href="#hero" class="footer-brand" aria-label="MacBreeze home">
-      <span class="footer-brand-dot" aria-hidden="true"></span>
+      <span class="footer-brand-mark" aria-hidden="true"></span>
       MacBreeze
     </a>
 
