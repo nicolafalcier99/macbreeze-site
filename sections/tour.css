@@ -93,11 +93,41 @@
     flex: 1 1 calc(50% - var(--space-2));
   }
 }
+/* Phones: tabs become a horizontal swipe strip of titles sitting right
+   above the screenshot, so tapping one changes the image in view. */
 @media (max-width: 600px) {
   .tour {
     padding: var(--space-6) var(--space-3);
   }
+  .tour-layout {
+    gap: var(--space-3);
+  }
+  .tour-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    margin: 0 calc(-1 * var(--space-3));
+    padding: 0 var(--space-3) var(--space-2);
+  }
+  .tour-tabs::-webkit-scrollbar {
+    display: none;
+  }
   .tour-tab {
-    flex: 1 1 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    border-color: var(--color-border);
+    min-height: 44px;
+    justify-content: center;
+  }
+  .tour-tab-title {
+    font-size: var(--font-size-small);
+    white-space: nowrap;
+  }
+  .tour-tab-desc {
+    display: none;
   }
 }

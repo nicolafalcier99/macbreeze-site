@@ -51,6 +51,8 @@ document.querySelectorAll(".tour-tab").forEach((tab) => {
       t.classList.toggle("active", t === tab);
       t.setAttribute("aria-selected", t === tab ? "true" : "false");
     });
+    // On phones the tabs are a horizontal strip; keep the chosen one in view.
+    tab.scrollIntoView({ block: "nearest", inline: "nearest" });
     document.querySelectorAll(".tour-image").forEach((img) => {
       img.hidden = img.dataset.tourImage !== target;
     });

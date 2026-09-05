@@ -120,19 +120,34 @@
   border: 0;
 }
 
-/* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
-@media (max-width: 760px) {
-  .compare-table {
-    min-width: 560px;
-  }
-}
+/* Responsive — extends the site's existing 900 / 760 / 600 breakpoints.
+   The table must fit the viewport on phones: a hidden horizontal scroll
+   would leave the Free/Pro columns invisible with no affordance. */
 @media (max-width: 600px) {
   .compare {
     padding: var(--space-6) var(--space-3);
+  }
+  .compare-table {
+    table-layout: fixed;
   }
   .compare-table thead th,
   .compare-table tbody th,
   .compare-table tbody td {
     padding: var(--space-2);
+  }
+  .compare-table thead th:not(.compare-th-feature),
+  .compare-table tbody td {
+    width: 64px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .compare-table tbody th {
+    padding-left: 0;
+    font-size: 0.8125rem;
+    line-height: 1.35;
+  }
+  .compare-cell-text {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 }
