@@ -10,11 +10,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
-// TODO(payment-provider): replace with real Stripe Checkout (Stripe Tax enabled).
-// Stripe: redirect to a Checkout Session URL created server-side, e.g.
-//   window.location = "https://checkout.stripe.com/pay/cs_..."
-// Until a provider is wired in, buy buttons explain what's next instead of
-// linking nowhere.
 document.querySelectorAll(".faq-item").forEach((item) => {
   const trigger = item.querySelector(".faq-trigger");
   trigger.addEventListener("click", () => {
@@ -30,10 +25,20 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
+// Stripe Payment Links, one per product. Stripe hosts the checkout page, collects the
+// buyer's email, and fires checkout.session.completed at the license server, which is what
+// actually issues and emails the key.
+const PAYMENT_LINKS = {
+  single: "https://buy.stripe.com/28E9AM6MP0543mt5XrdnW00",
+  pack4: "https://buy.stripe.com/3cI6oA9Z12dc3mt4TndnW01",
+};
+
 document.querySelectorAll(".buy-link").forEach((el) => {
   el.addEventListener("click", (e) => {
+    const url = PAYMENT_LINKS[el.dataset.product];
+    if (!url) return; // Unknown product: leave the link alone rather than sending someone nowhere.
     e.preventDefault();
-    alert("Checkout isn't wired up yet — this button will open purchase once payment processing is connected.");
+    window.location.href = url;
   });
 });
 
