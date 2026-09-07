@@ -42,10 +42,15 @@ document.querySelectorAll(".buy-link").forEach((el) => {
   });
 });
 
+// Signed and notarised builds are published as GitHub releases. This "latest" URL always
+// resolves to the newest release's asset, so publishing a new version needs no site change.
+const DOWNLOAD_URL =
+  "https://github.com/nicolafalcier99/macbreeze-site/releases/latest/download/MacBreeze.dmg";
+
 document.querySelectorAll(".download-link").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
-    alert("Download link goes here once a release build is published.");
+    window.location.href = DOWNLOAD_URL;
   });
 });
 
