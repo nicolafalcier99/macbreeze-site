@@ -10,13 +10,5 @@
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.3.dmg" length="3241982" type="application/octet-stream" sparkle:edSignature="NvCr0qRibpI5egKMnWOqbSYIP8pOFtOSJxpneeKc04P93i5HI9AsugTBuidiDyciOFPmQkKbicJQpr/qDUMxCA=="/>
         </item>
-        <item>
-            <title>1.0.3</title>
-            <pubDate>Wed, 09 Sep 2026 11:28:54 +0900</pubDate>
-            <sparkle:version>91</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.3.dmg" length="3227695" type="application/octet-stream" sparkle:edSignature="92kYYTncSE2OJ3h91HcqhkvP4QiuNzEOb3zUyzjk8zbBeALV6fAJwPvBbkJ5ImC9k/7+/vWNbNeaPwCMkXhUBQ=="/>
-        </item>
     </channel>
 </rss>
