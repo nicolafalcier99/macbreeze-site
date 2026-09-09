@@ -8,6 +8,19 @@
             <sparkle:version>99</sparkle:version>
             <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Fixed</h3>
+<ul>
+<li>Updates now restart the app properly. MacBreeze deliberately ignores ordinary quit requests, because it lives in the menu bar and closing its window should only hide it — but that also blocked the updater from restarting the app to finish installing. Updating now closes and reopens MacBreeze by itself.</li>
+</ul>
+<p>Note: this fix has to be <em>in</em> the version you are updating from. If you are on 1.0.3 or 1.0.4 and an update does not restart on its own, quit MacBreeze from its menu bar icon and it will finish installing.</p>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.5.dmg" length="3246881" type="application/octet-stream" sparkle:edSignature="W/T/9/ptuXrKhwS+Qv4GkXHWLiPX5z+Qm/CC0npkkDjg6qPpSJ75dzv39Z025M1NenNmqSCPa6p+8XQG+bfLAA=="/>
             <sparkle:deltas>
                 <enclosure url="https://macbreeze.app/downloads/MacBreeze99-97.delta" sparkle:deltaFrom="97" length="188490" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="7uzG4ADHkovj0pjJbzxpKftqJpRDPiX2Ie3o/fHp08hO7gRRBu4tenG4aUmfzCXgc/2Yb+BABbrwz8UbE/6FCQ=="/>
@@ -20,6 +33,23 @@
             <sparkle:version>97</sparkle:version>
             <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<p>The first release MacBreeze can install by itself. If you are on 1.0.3, you should be offered this one rather than having to fetch it.</p>
+<h3>Changed</h3>
+<ul>
+<li>Scrollbars no longer appear anywhere in the app.</li>
+</ul>
+<h3>Under the hood</h3>
+<ul>
+<li>Fixes to the release process: the download link on the site is now served by the site itself, and the published download is checked automatically after every release.</li>
+</ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.4.dmg" length="3244050" type="application/octet-stream" sparkle:edSignature="qT8l8K7SeYbWs+/JBWo6M5/qpZ2FyoenbfrP+6d0C4BpgF1oCpePC56AeCnkW8u4vRvmwdPxlJkAbzXS3wXXBA=="/>
         </item>
         <item>

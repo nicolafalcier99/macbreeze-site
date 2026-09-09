@@ -1,0 +1,13 @@
+<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Fixed</h3>
+<ul>
+<li>Updates now restart the app properly. MacBreeze deliberately ignores ordinary quit requests, because it lives in the menu bar and closing its window should only hide it — but that also blocked the updater from restarting the app to finish installing. Updating now closes and reopens MacBreeze by itself.</li>
+</ul>
+<p>Note: this fix has to be <em>in</em> the version you are updating from. If you are on 1.0.3 or 1.0.4 and an update does not restart on its own, quit MacBreeze from its menu bar icon and it will finish installing.</p>
