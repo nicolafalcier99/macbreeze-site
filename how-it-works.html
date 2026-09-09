@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How MacBreeze Works</title>
+<title>How MacBreeze works</title>
 <meta name="description" content="Exactly what MacBreeze reads, what it changes, what its privileged helper can and cannot do, and what leaves your Mac.">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="tokens.css">
@@ -207,6 +207,14 @@
   .legal-inner li {
     margin-bottom: 0.4rem;
     line-height: 1.65;
+    /* Paragraphs on these pages are secondary; without this, list items inherit the primary
+       text colour and read as brighter than the prose around them. */
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-body);
+  }
+  /* The lead-in of each safety net, kept at full strength so the three are scannable. */
+  .legal-inner li strong {
+    color: var(--color-text);
   }
   .legal-lead {
     font-size: 1.05rem;
@@ -218,7 +226,9 @@
     border: 1px solid var(--color-border);
     border-left-width: 3px;
     border-radius: 8px;
-    background: var(--color-nav-bg);
+    /* Not --color-nav-bg: that is deliberately translucent for the blurred nav, and reads as a
+       muddy panel when used as a solid background. */
+    background: var(--color-bg-elevated);
   }
   .legal-note p:first-child { margin-top: 0; }
   .legal-note p:last-child { margin-bottom: 0; }
@@ -243,7 +253,7 @@
 <main>
   <section class="legal">
     <div class="legal-inner">
-      <h1>How MacBreeze Works</h1>
+      <h1>How MacBreeze works</h1>
       <p class="legal-updated">Last updated: September 9, 2026</p>
 
       <p class="legal-lead">MacBreeze takes control of your Mac&rsquo;s fans, and to do that it installs a small
