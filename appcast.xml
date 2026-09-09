@@ -3,15 +3,24 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.5</title>
+            <pubDate>Wed, 09 Sep 2026 18:03:33 +0900</pubDate>
+            <sparkle:version>99</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.5.dmg" length="3246881" type="application/octet-stream" sparkle:edSignature="W/T/9/ptuXrKhwS+Qv4GkXHWLiPX5z+Qm/CC0npkkDjg6qPpSJ75dzv39Z025M1NenNmqSCPa6p+8XQG+bfLAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze99-97.delta" sparkle:deltaFrom="97" length="188490" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="7uzG4ADHkovj0pjJbzxpKftqJpRDPiX2Ie3o/fHp08hO7gRRBu4tenG4aUmfzCXgc/2Yb+BABbrwz8UbE/6FCQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze99-92.delta" sparkle:deltaFrom="92" length="209758" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NVPGIXKRu3lZpiKE95oSvATTRAT8Z0N1xR8QjJG2VThDSIcFXM2q8y9JqN1Egipjezbb1EV0J1FIpPYsiN6YAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.4</title>
             <pubDate>Wed, 09 Sep 2026 17:55:58 +0900</pubDate>
             <sparkle:version>97</sparkle:version>
             <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.4.dmg" length="3244050" type="application/octet-stream" sparkle:edSignature="qT8l8K7SeYbWs+/JBWo6M5/qpZ2FyoenbfrP+6d0C4BpgF1oCpePC56AeCnkW8u4vRvmwdPxlJkAbzXS3wXXBA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze97-92.delta" sparkle:deltaFrom="92" length="181330" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cj60q4ErdQVfpnrDX2whbcsR9YhC3D/KW9df+7XKbOsQWKi3WMjelGRWRHW76Flh2jfk5iyuEwydpex+dIRtBA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.3</title>
