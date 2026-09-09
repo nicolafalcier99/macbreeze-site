@@ -3,6 +3,17 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.4</title>
+            <pubDate>Wed, 09 Sep 2026 17:55:58 +0900</pubDate>
+            <sparkle:version>97</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.4.dmg" length="3244050" type="application/octet-stream" sparkle:edSignature="qT8l8K7SeYbWs+/JBWo6M5/qpZ2FyoenbfrP+6d0C4BpgF1oCpePC56AeCnkW8u4vRvmwdPxlJkAbzXS3wXXBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze97-92.delta" sparkle:deltaFrom="92" length="181330" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cj60q4ErdQVfpnrDX2whbcsR9YhC3D/KW9df+7XKbOsQWKi3WMjelGRWRHW76Flh2jfk5iyuEwydpex+dIRtBA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.3</title>
             <pubDate>Wed, 09 Sep 2026 11:28:54 +0900</pubDate>
             <sparkle:version>92</sparkle:version>
