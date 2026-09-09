@@ -23,6 +23,19 @@ body {
   width: 0;
   height: 0;
 }
+/* The page scroller needs saying separately for Android. There the document's scrollbar is an
+   overlay the browser draws itself, and ::-webkit-scrollbar never reaches it — only the standard
+   properties do, and only on Chromium 121 and later (Samsung Internet 25+). Naming html, body
+   and :root explicitly costs nothing and covers whichever of them the browser treats as the
+   scrolling element. On older Samsung Internet the indicator is not reachable from CSS at all;
+   removing it there would mean scrolling a container instead of the document, which also stops
+   the address bar collapsing as you scroll. */
+html,
+body,
+:root {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
 img {
   max-width: 100%;
   height: auto;
