@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How MacBreeze Works</title>
+<meta name="description" content="Exactly what MacBreeze reads, what it changes, what its privileged helper can and cannot do, and what leaves your Mac.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  /* How-it-works page chrome — standalone page, not spliced from sections/,
+     so its nav + footer presentation is self-contained here rather than
+     linking another task's section CSS. Mirrors the same tokens.css-driven
+     look as the rest of the renewed site. */
+
+  /* Nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-nav-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .nav-brand-mark {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    -webkit-mask-image: url("images/logo-mark.png");
+    mask-image: url("images/logo-mark.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+  .nav-links a {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+  .nav-links a:hover {
+    color: var(--color-text);
+    background: var(--color-border);
+  }
+  .nav-links a.nav-cta {
+    color: var(--color-accent);
+    padding-right: var(--space-2);
+  }
+  .nav-links a.nav-cta:hover {
+    color: var(--color-accent-hover);
+    background: transparent;
+  }
+
+  /* Legal content */
+  .legal {
+    padding: var(--space-7) var(--space-4);
+  }
+  .legal-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-inner h1 {
+    font-size: var(--font-size-h2);
+    line-height: 1.15;
+    margin: 0;
+  }
+  .legal-updated {
+    margin: var(--space-2) 0 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+  }
+  .legal-inner h2 {
+    font-size: var(--font-size-h3);
+    margin: var(--space-6) 0 var(--space-2);
+  }
+  .legal-inner p {
+    margin: 0 0 var(--space-3);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+  }
+  .legal-inner a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .legal-inner a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+  }
+
+  /* Footer (same content/style as sections/footer.html — duplicated inline
+     since this standalone page doesn't link another task's section CSS) */
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-6) var(--space-4);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .footer-brand-mark {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    -webkit-mask-image: url("images/logo-mark.png");
+    mask-image: url("images/logo-mark.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .footer-links a {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .footer-links a:hover {
+    color: var(--color-text);
+  }
+  .footer-brand:focus-visible,
+  .footer-links a:focus-visible,
+  .nav-brand:focus-visible,
+  .nav-links a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
+  @media (max-width: 760px) {
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--space-3);
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-links a:not(.nav-cta) {
+      display: none;
+    }
+  }
+
+  /* This page is longer and more structured than the policy pages, so it needs a few things
+     the .legal styles never had to provide: lists, a lead paragraph, and a callout. */
+  .legal-inner ul {
+    margin: var(--space-2) 0 var(--space-3);
+    padding-left: 1.25rem;
+  }
+  .legal-inner li {
+    margin-bottom: 0.4rem;
+    line-height: 1.65;
+  }
+  .legal-lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  .legal-note {
+    margin: var(--space-3) 0;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-left-width: 3px;
+    border-radius: 8px;
+    background: var(--color-nav-bg);
+  }
+  .legal-note p:first-child { margin-top: 0; }
+  .legal-note p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html#hero" class="nav-brand">
+      <span class="nav-brand-mark" aria-hidden="true"></span>
+      MacBreeze
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#pricing" class="nav-cta">Get MacBreeze</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="legal">
+    <div class="legal-inner">
+      <h1>How MacBreeze Works</h1>
+      <p class="legal-updated">Last updated: September 9, 2026</p>
+
+      <p class="legal-lead">MacBreeze changes how your Mac&rsquo;s fans behave, and to do that it installs a small
+      privileged component. That is a reasonable thing to be cautious about, so this page describes exactly what it
+      reads, what it changes, what it can&rsquo;t do, and what leaves your Mac. If anything here is unclear, ask us
+      before you buy.</p>
+
+      <h2>What MacBreeze reads</h2>
+      <p>MacBreeze reads sensors your Mac already exposes through its System Management Controller:</p>
+      <ul>
+        <li>Temperatures &mdash; processor, graphics, and battery</li>
+        <li>Fan speeds, in RPM, and each fan&rsquo;s minimum and maximum</li>
+        <li>Power state &mdash; whether you are on battery or mains, and the charging wattage</li>
+      </ul>
+      <p>It reads nothing else. It does not see your files, your screen, your keystrokes, your network traffic,
+      or which applications you use &mdash; with one narrow exception: if you create an app automation, MacBreeze
+      checks whether that one specific application is running, so it can apply the rule you asked for.</p>
+
+      <h2>What MacBreeze changes</h2>
+      <p>Fan speed. That is the whole list.</p>
+      <p>It does not touch processor frequency, voltage, power limits, or any other part of how your Mac runs. It
+      cannot make your Mac faster, and it cannot make it draw more power than Apple allows. It sets a target speed
+      for fans that already exist, between the minimum and maximum your own hardware reports.</p>
+      <p>You can set that target directly as a percentage or an RPM figure, or draw a curve that ties fan speed to
+      temperature. Handing control back to macOS is always one click away.</p>
+
+      <h2>The fan helper, and why it exists</h2>
+      <p>Talking to the System Management Controller requires privileges a normal application does not have. This is
+      also why MacBreeze is not on the Mac App Store: App Store applications run in a sandbox that forbids exactly
+      this kind of hardware access.</p>
+      <p>So MacBreeze ships a separate, very small program &mdash; the fan helper &mdash; which lives inside the
+      MacBreeze app bundle and is installed through macOS&rsquo;s own approval mechanism. You are asked for permission;
+      it cannot install itself quietly.</p>
+      <p>The helper accepts exactly six instructions, and nothing else:</p>
+      <ul>
+        <li>report its version, so MacBreeze can refuse to talk to a mismatched helper</li>
+        <li>report a snapshot of the current sensor readings</li>
+        <li>set a fan&rsquo;s mode and target speed</li>
+        <li>receive a heartbeat saying MacBreeze is still alive</li>
+        <li>report what this particular Mac&rsquo;s hardware supports</li>
+        <li>update the temperature at which the overheat safety net triggers</li>
+      </ul>
+      <p>There is no instruction that runs a command, reads a file, or opens a network connection, because no such
+      instruction exists in it. The helper never connects to the internet.</p>
+      <p>It also refuses to talk to anything but MacBreeze itself. Before accepting a connection it verifies the
+      calling program&rsquo;s code signature &mdash; signed by Apple, carrying MacBreeze&rsquo;s bundle identifier, under
+      our developer team. Another program on your Mac cannot drive your fans by pretending to be MacBreeze.</p>
+
+      <h2>Three safety nets</h2>
+      <p>Setting fan speeds by hand carries an obvious risk: fans set too low during heavy work. Three independent
+      protections address it, and two of them run inside the helper rather than the app, so they keep working even if
+      MacBreeze itself stops.</p>
+      <ul>
+        <li><strong>Auto-Blast.</strong> If temperature crosses a threshold, the helper drives the fans to full speed
+        on its own, regardless of what you set. The threshold can be moved between 70&nbsp;&deg;C and 95&nbsp;&deg;C,
+        and no further in either direction.</li>
+        <li><strong>The 45-second heartbeat.</strong> MacBreeze tells the helper it is still running. If that stops
+        &mdash; the app quit, crashed, or hung &mdash; the helper returns your fans to normal macOS control by itself
+        after 45 seconds. A crashed application cannot leave your fans stuck.</li>
+        <li><strong>Your Mac&rsquo;s own firmware.</strong> Apple&rsquo;s thermal protection sits underneath all of
+        this and is not modified, disabled, or bypassed. If your Mac decides it must slow down or shut down to protect
+        itself, it still will.</li>
+      </ul>
+
+      <h2>What leaves your Mac</h2>
+      <p>MacBreeze contacts two addresses, both ours, and nothing else:</p>
+      <ul>
+        <li><strong>license.macbreeze.app</strong> &mdash; to start your trial, check your licence, and manage which
+        Macs it is active on.</li>
+        <li><strong>macbreeze.app</strong> &mdash; to ask whether a newer version exists, and to download it if you
+        agree to update.</li>
+      </ul>
+      <p>A licence check sends your licence key, a hashed device identifier, and a short device label such as
+      &ldquo;MacBook Pro &middot; M4 Pro&rdquo;. The label deliberately is <em>not</em> your computer&rsquo;s name,
+      which usually contains a person&rsquo;s real name.</p>
+      <p>The device identifier is your Mac&rsquo;s hardware UUID, hashed with SHA-256 <em>on your Mac</em> before it is
+      sent. The original never leaves the machine and we never receive it, so it cannot be reconstructed from anything
+      we store.</p>
+      <div class="legal-note">
+        <p>There is no analytics, no telemetry, no crash reporting and no advertising identifier in MacBreeze. We
+        cannot see your temperatures, your fan settings, your profiles, or how often you use the app. Those never
+        leave your Mac.</p>
+      </div>
+
+      <h2>Where your settings live</h2>
+      <p>Your profiles, automations, curves and preferences are stored on your own Mac in the standard location for
+      application settings. Your licence key is kept in the macOS Keychain.</p>
+      <p>You can export your settings to a file to move them to another Mac. That file deliberately contains no
+      licence key and no information about your machine, so it is safe to send to yourself however you like.</p>
+
+      <h2>Updates</h2>
+      <p>MacBreeze checks for updates and asks before installing one. You can turn automatic checking off in Settings.</p>
+      <p>Every update is signed twice: with our Apple Developer ID and notarised by Apple, and separately with our own
+      update-signing key. MacBreeze refuses any update whose signature does not match, so a tampered download cannot be
+      installed even if someone managed to serve you one.</p>
+
+      <h2>What MacBreeze cannot do</h2>
+      <ul>
+        <li>It cannot add fan control to a Mac that has no controllable fans. On fanless models &mdash; the MacBook
+        Air among them &mdash; MacBreeze shows temperatures and nothing else, and says so.</li>
+        <li>It cannot exceed your fans&rsquo; real maximum speed, or drop below their real minimum.</li>
+        <li>It cannot cool a Mac beyond what its existing hardware is physically capable of.</li>
+        <li>Without the helper installed and approved, it cannot control fans at all &mdash; it will tell you so
+        rather than pretend to work.</li>
+      </ul>
+
+      <h2>Removing it</h2>
+      <p>Turn off fan control in MacBreeze&rsquo;s settings and the helper is unregistered and removed. Then drag
+      MacBreeze to the Bin like any other application. Your fans return to normal macOS control immediately, and
+      nothing is left behind that keeps running.</p>
+
+      <h2>Free, trial and Pro</h2>
+      <p>The download is free and needs no payment details. Every new installation starts a 14-day trial with all Pro
+      features unlocked, with no card required.</p>
+      <p>When the trial ends, MacBreeze keeps working &mdash; it is not a demo that stops. Monitoring, manual fan
+      control and the Auto-Blast safety net stay free permanently, along with two profiles and one app automation. Pro
+      removes those limits and adds the visual curve editor, a custom overheat threshold, and overheat notifications.</p>
+
+      <h2>Questions</h2>
+      <p>If something here doesn&rsquo;t answer what you wanted to know, email
+      <a href="mailto:support@macbreeze.app">support@macbreeze.app</a> and we will explain it properly. See also our
+      <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html#hero" class="footer-brand" aria-label="MacBreeze home">
+      <span class="footer-brand-mark" aria-hidden="true"></span>
+      MacBreeze
+    </a>
+    <p class="footer-copyright">&copy; <span id="year"></span> MacBreeze. Built for MacBook.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="how-it-works.html">How it works</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@macbreeze.app">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
