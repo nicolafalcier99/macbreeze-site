@@ -42,10 +42,12 @@ document.querySelectorAll(".buy-link").forEach((el) => {
   });
 });
 
-// Signed and notarised builds are published as GitHub releases. This "latest" URL always
-// resolves to the newest release's asset, so publishing a new version needs no site change.
-const DOWNLOAD_URL =
-  "https://github.com/nicolafalcier99/macbreeze-site/releases/latest/download/MacBreeze.dmg";
+// Served from this site rather than from the GitHub release. The release's own
+// /releases/latest/download/ URL depends on the asset being named exactly right, and a release
+// published with a versioned filename silently turned the download button into a 404 while the
+// release page itself looked perfectly fine. This path is a plain file in this repo: if it is
+// wrong, it is wrong visibly, and it is fixed by pushing a commit.
+const DOWNLOAD_URL = "https://macbreeze.app/latest/MacBreeze.dmg";
 
 document.querySelectorAll(".download-link").forEach((el) => {
   el.addEventListener("click", (e) => {
