@@ -254,7 +254,7 @@
   <section class="legal">
     <div class="legal-inner">
       <h1>How MacBreeze works</h1>
-      <p class="legal-updated">Last updated: September 9, 2026</p>
+      <p class="legal-updated">Last updated: September 10, 2026</p>
 
       <p class="legal-lead">MacBreeze takes control of your Mac&rsquo;s fans, and to do that it installs a small
       privileged component. You should want to know what that component can do before you let it near your machine.
@@ -322,15 +322,16 @@
         <li><strong>macbreeze.app</strong> &mdash; asking whether a newer version exists, and downloading it if you
         agree</li>
       </ul>
-      <p>A licence check sends three things: your licence key, a hashed device identifier, and a short label such as
+      <p>A licence check &mdash; when MacBreeze starts, and once a day while it runs &mdash; sends three things: your licence key, a hashed device identifier, and a short label such as
       &ldquo;MacBook Pro &middot; M4 Pro&rdquo;. That label is deliberately not your computer&rsquo;s name, which
       usually contains someone&rsquo;s real name.</p>
       <p>The identifier is your Mac&rsquo;s hardware UUID, hashed on your Mac before it is sent. The original never
       leaves the machine, so nothing we store can be turned back into it.</p>
       <div class="legal-note">
-        <p>No analytics. No telemetry. No crash reporting. No advertising identifier.</p>
-        <p>We cannot see your temperatures, your fan settings, your profiles, or whether you have opened the app since
-        the day you bought it. None of that leaves your Mac.</p>
+        <p>No analytics SDK. No crash reporting. No advertising identifier.</p>
+        <p>The one thing we learn about use is that your Mac checked in on a given day, and whether it&rsquo;s on a
+        trial, free, or paid. We count those as totals &mdash; how many Macs this week &mdash; and keep only the latest
+        date. We can&rsquo;t see your temperatures, fan settings, profiles, or which features you use.</p>
       </div>
 
       <h2>Where your settings live</h2>
