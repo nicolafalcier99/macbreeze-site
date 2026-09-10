@@ -3,6 +3,35 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.7</title>
+            <pubDate>Thu, 10 Sep 2026 21:38:22 +0900</pubDate>
+            <sparkle:version>105</sparkle:version>
+            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Fixed</h3>
+<ul>
+<li><strong>Fan controls looked frozen in the menu bar.</strong> While an app automation is running, MacBreeze locks the fan settings so the rule stays in charge — but the menu bar never said so. It now tells you which app is in control, and gives you a link straight to App Automations to change it.</li>
+<li><strong>The trial-ended notice could be missed.</strong> MacBreeze only checked your licence when it started, so if your trial ended while it was running you weren&#x27;t told until you next restarted it. It now checks once a day.</li>
+</ul>
+<h3>Privacy</h3>
+<p>MacBreeze now records the day your Mac last checked its licence, and whether it&#x27;s on a trial, the free version, or a paid licence, so we can count how many people use it. Nothing about how you use the app is recorded, and the record deletes itself after 90 days without a check-in. The details are in the privacy policy at macbreeze.app.</p>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.7.dmg" length="3283740" type="application/octet-stream" sparkle:edSignature="bkwz0KdipDLMJR1DYcP87FgNYz/O1DnvRs/ICPltFf+59Ve4vA99QKqpIkEa240b6D7UOzRcDBv045j2p8d8Aw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze105-102.delta" sparkle:deltaFrom="102" length="193842" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Pbdjy+yOFsHTXOBsVJv6DhRyZFSpfRXzRupheP/lXB8RkdIDEe4/wOjWOUsKoxeygI6YPKAa02saqSs/ZIYtAw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze105-99.delta" sparkle:deltaFrom="99" length="240278" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="tcryaOZQrpGPnWtkKhqa8dKajXrF3PdMgVh+gccm/B5B+msrp33ueEUdnxAQuxUonUwTUp03wPSqqEw/62+fBQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze105-97.delta" sparkle:deltaFrom="97" length="262034" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qoE4YwxuJJZaXCUxOLIP8DTNlqOW0Bnx2mlDl0a1v3W8gqZqN5kPHLfF9ZOMHW0W0Btoi5i+zOjeSAkFotKEAA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze105-92.delta" sparkle:deltaFrom="92" length="272042" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PHGjndMy5B03SA/Ow8gLQK5WjpyXEp34KHpKWPkpltXZzqYV77hQ7ckbpV/zhDxsNyBEXX4Zre83Fs35aEoUDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.6</title>
             <pubDate>Wed, 09 Sep 2026 18:26:00 +0900</pubDate>
             <sparkle:version>102</sparkle:version>
@@ -22,11 +51,6 @@
 <li><strong>Quit did nothing.</strong> Quit and Cmd-Q are now honoured. Closing the window still only hides MacBreeze, which is the point of it living in the menu bar.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.6.dmg" length="3261196" type="application/octet-stream" sparkle:edSignature="Xu+Risd8OWvzbdu402hACkasrZZ/BiM+uqrz3FJ/Wbxm6nRS1808X+CO2+AUr1UaRDgjDh7odI62B+ZpIzweBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze102-99.delta" sparkle:deltaFrom="99" length="208514" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="nPwOwu2wbNO1RAHMFbR0UTPPC+yADMJFutO6v0DbdXVXiyuW+mZ8gwUeLDfQVfP/iloFp8m7kgRhG8jpQziADA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze102-97.delta" sparkle:deltaFrom="97" length="231930" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sY94iDug5H4GunU94UYHifrLUul4uXQHRefEEoeBSQsaYPrUYhCHZW/R3MtBK2wkrQwxAKv+3S6ZIev1FVWIAQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze102-92.delta" sparkle:deltaFrom="92" length="244006" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="o94zyVF1jNq5UQMcUTHTADpStQaWaonLZqGethl7NxgdSEYMW347lVaaTn2i59Qb8SKMO4f1McSCC4AiEBvPDg=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.5</title>
@@ -48,31 +72,6 @@
 </ul>
 <p>Note: this fix has to be <em>in</em> the version you are updating from. If you are on 1.0.3 or 1.0.4 and an update does not restart on its own, quit MacBreeze from its menu bar icon and it will finish installing.</p>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.5.dmg" length="3246881" type="application/octet-stream" sparkle:edSignature="W/T/9/ptuXrKhwS+Qv4GkXHWLiPX5z+Qm/CC0npkkDjg6qPpSJ75dzv39Z025M1NenNmqSCPa6p+8XQG+bfLAA=="/>
-        </item>
-        <item>
-            <title>1.0.4</title>
-            <pubDate>Wed, 09 Sep 2026 17:55:58 +0900</pubDate>
-            <sparkle:version>97</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<p>The first release MacBreeze can install by itself. If you are on 1.0.3, you should be offered this one rather than having to fetch it.</p>
-<h3>Changed</h3>
-<ul>
-<li>Scrollbars no longer appear anywhere in the app.</li>
-</ul>
-<h3>Under the hood</h3>
-<ul>
-<li>Fixes to the release process: the download link on the site is now served by the site itself, and the published download is checked automatically after every release.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.4.dmg" length="3244050" type="application/octet-stream" sparkle:edSignature="qT8l8K7SeYbWs+/JBWo6M5/qpZ2FyoenbfrP+6d0C4BpgF1oCpePC56AeCnkW8u4vRvmwdPxlJkAbzXS3wXXBA=="/>
         </item>
     </channel>
 </rss>
