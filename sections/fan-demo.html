@@ -1,0 +1,77 @@
+<section id="fan-demo" class="fan-demo">
+  <div class="fan-demo-inner">
+    <h2 class="fan-demo-heading reveal">Four ways to run your fans.</h2>
+    <p class="fan-demo-subhead reveal">Auto, Manual, Sensor, or Blast — try it yourself. Simulated, not your Mac's live data.</p>
+
+    <div class="fan-demo-stage reveal d2">
+      <div class="fan-demo-card" id="fan-demo-card">
+        <div class="fan-demo-card-row">
+          <span class="fan-demo-card-label">Fan mode</span>
+          <div class="fan-demo-modes" id="fan-demo-modes">
+            <button class="fan-demo-mode active" data-mode="auto" type="button">Auto</button>
+            <span class="fan-demo-modes-sep">|</span>
+            <button class="fan-demo-mode" data-mode="manual" type="button">Manual</button>
+            <span class="fan-demo-modes-sep">|</span>
+            <button class="fan-demo-mode" data-mode="sensor" type="button">Sensor</button>
+          </div>
+        </div>
+
+        <div class="fan-demo-control" id="fan-demo-control">
+          <div class="fan-demo-slider-row" id="fan-demo-slider-row" hidden>
+            <div class="fan-demo-slider" id="fan-demo-slider">
+              <div class="fan-demo-slider-fill" id="fan-demo-slider-fill"></div>
+              <div class="fan-demo-slider-knob" id="fan-demo-slider-knob"></div>
+            </div>
+            <div class="fan-demo-stat-panel">
+              <div class="fan-demo-stat"><span>Speed</span><strong id="fan-demo-manual-speed">45%</strong></div>
+            </div>
+          </div>
+
+          <div class="fan-demo-curve" id="fan-demo-curve" hidden>
+            <svg class="fan-demo-curve-svg" viewBox="0 0 300 120" focusable="false" aria-hidden="true">
+              <line x1="0" y1="90" x2="300" y2="90" class="fan-demo-curve-grid"></line>
+              <line x1="0" y1="60" x2="300" y2="60" class="fan-demo-curve-grid"></line>
+              <line x1="0" y1="30" x2="300" y2="30" class="fan-demo-curve-grid"></line>
+              <polyline id="fan-demo-curve-line" points="10,102.2 85.6,88.8 155.6,67.7 225.6,33.1 290,12" class="fan-demo-curve-line"></polyline>
+              <line id="fan-demo-curve-marker-line" x1="122" y1="0" x2="122" y2="120" class="fan-demo-curve-marker-line"></line>
+              <circle id="fan-demo-curve-marker-dot" cx="122" cy="76.1" r="6" class="fan-demo-curve-marker-dot"></circle>
+            </svg>
+            <div class="fan-demo-stat-panel">
+              <div class="fan-demo-stat"><span>Speed</span><strong id="fan-demo-curve-speed">33%</strong></div>
+            </div>
+          </div>
+
+          <p class="fan-demo-control-note" id="fan-demo-control-note" hidden>
+            <span class="fan-demo-live-dot" id="fan-demo-live-dot" aria-hidden="true"></span>
+            Speed follows the system automatically.
+          </p>
+        </div>
+
+        <div class="fan-demo-tiles fan-demo-tiles-temps">
+          <div class="fan-demo-tile"><span>CPU</span><strong id="fan-demo-cpu">98°F</strong></div>
+          <div class="fan-demo-tile"><span>GPU</span><strong id="fan-demo-gpu">94°F</strong></div>
+        </div>
+
+        <div class="fan-demo-tiles">
+          <div class="fan-demo-tile"><span>Left</span><strong id="fan-demo-left">1,745</strong> RPM</div>
+          <div class="fan-demo-tile"><span>Right</span><strong id="fan-demo-right">1,751</strong> RPM</div>
+        </div>
+
+        <button class="fan-demo-blast" id="fan-demo-blast" type="button">Blast</button>
+
+        <div class="fan-demo-automation-row">
+          <span class="fan-demo-card-label">Simulate an app</span>
+          <div class="fan-demo-apps" id="fan-demo-apps">
+            <button class="fan-demo-app active" data-app="none" type="button">None</button>
+            <button class="fan-demo-app" data-app="resolve" type="button"><img src="images/app-davinci.png" alt="" class="fan-demo-app-icon">DaVinci Resolve</button>
+            <button class="fan-demo-app" data-app="blender" type="button"><img src="images/app-blender.png" alt="" class="fan-demo-app-icon">Blender</button>
+            <button class="fan-demo-app" data-app="ai" type="button"><img src="images/app-claude.png" alt="" class="fan-demo-app-icon">Claude</button>
+          </div>
+        </div>
+        <p class="fan-demo-lock-note" id="fan-demo-lock-note" hidden>Locked by App Automation — <strong id="fan-demo-lock-app"></strong> is running.</p>
+      </div>
+
+      <p class="fan-demo-caption" id="fan-demo-caption">Auto — macOS drives the fans on its own.</p>
+    </div>
+  </div>
+</section>

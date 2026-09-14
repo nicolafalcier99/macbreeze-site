@@ -73,18 +73,11 @@
 }
 
 .diagram-app-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 26px;
   height: 26px;
   flex-shrink: 0;
   border-radius: 7px;
-  background: var(--chip-color, var(--color-accent));
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .diagram-arrow {

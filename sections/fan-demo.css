@@ -1,0 +1,410 @@
+/* Fan modes demo — hand-built replica of the app's Fans card, not a screenshot.
+   Fixed dark palette (matches the app's own UI) regardless of site light/dark theme,
+   the same way a screenshot would read the same in both. */
+.fan-demo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-4);
+}
+
+.fan-demo-heading {
+  font-size: var(--font-size-h2);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  text-align: center;
+}
+
+.fan-demo-subhead {
+  margin: 0 0 var(--space-5);
+  text-align: center;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.fan-demo-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.fan-demo-card {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: #1c1c1e;
+  border: 1px solid #38383a;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 28px 28px 24px;
+  font-family: var(--font-sans);
+  color: #f5f5f7;
+}
+
+.fan-demo-card-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.fan-demo-card-label {
+  color: #a1a1a6;
+  font-size: 0.9375rem;
+}
+
+.fan-demo-automation-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 22px 0 12px;
+  padding-top: 22px;
+  border-top: 1px solid #2c2c2e;
+}
+
+.fan-demo-apps {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.fan-demo-app {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #d1d1d6;
+  background: #000;
+  border: 1px solid #38383a;
+  border-radius: var(--radius-pill);
+  padding: 5px 13px 5px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.fan-demo-app.active {
+  background: #0a84ff;
+  color: #fff;
+  border-color: #0a84ff;
+}
+
+.fan-demo-app-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.fan-demo-lock-note {
+  margin: 0 0 14px;
+  font-size: 0.8125rem;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.fan-demo-lock-note strong {
+  color: #fbbf24;
+}
+
+.fan-demo-modes.locked {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.fan-demo-modes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #000;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.fan-demo-modes-sep {
+  color: #48484a;
+  font-size: 0.8125rem;
+}
+
+.fan-demo-mode {
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #d1d1d6;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.fan-demo-mode.active {
+  background: #0a84ff;
+  color: #fff;
+}
+
+/* Fixed height so the card doesn't resize when Sensor's curve (or Auto's
+   empty state) swaps in for the slider — every mode occupies the same
+   footprint. */
+.fan-demo-control {
+  position: relative;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.fan-demo-control-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #8e8e93;
+}
+
+.fan-demo-control-note[hidden] {
+  display: none;
+}
+
+.fan-demo-live-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.fan-demo-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.fan-demo-slider-row[hidden] {
+  display: none;
+}
+
+.fan-demo-slider {
+  position: relative;
+  flex: 1;
+  height: 28px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.fan-demo-slider-fill {
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.fan-demo-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: #38383a;
+  transform: translateY(-50%);
+}
+
+.fan-demo-slider-fill {
+  left: 0;
+  width: 15%;
+  background: #0a84ff;
+  z-index: 1;
+}
+
+.fan-demo-slider-knob {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.fan-demo-slider.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.fan-demo-slider:active {
+  cursor: grabbing;
+}
+
+.fan-demo-curve {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.fan-demo-curve[hidden] {
+  display: none;
+}
+
+.fan-demo-curve-svg {
+  width: 220px;
+  flex-shrink: 0;
+  aspect-ratio: 300 / 120;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.fan-demo-stat-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.fan-demo-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #000;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.8125rem;
+  color: #a1a1a6;
+}
+
+.fan-demo-stat strong {
+  color: #f5f5f7;
+  font-size: 1.125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.fan-demo-curve-grid {
+  stroke: #2c2c2e;
+  stroke-width: 1;
+}
+
+.fan-demo-curve-line {
+  fill: none;
+  stroke: #0a84ff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fan-demo-curve-marker-line {
+  stroke: #fbbf24;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.fan-demo-curve-marker-dot {
+  fill: #fbbf24;
+  stroke: #1c1c1e;
+  stroke-width: 2;
+}
+
+.fan-demo-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.fan-demo-tile {
+  background: #000;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #a1a1a6;
+}
+
+.fan-demo-tile strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 1.0625rem;
+  color: #f5f5f7;
+  font-variant-numeric: tabular-nums;
+}
+
+.fan-demo-blast {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #d1d1d6;
+  background: #000;
+  border: 1px solid #38383a;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fan-demo-blast.active {
+  color: #fff;
+  background: #f8717a;
+  border-color: #f8717a;
+  box-shadow: 0 0 24px rgba(248, 113, 113, 0.45);
+}
+
+.fan-demo-caption {
+  min-height: 1.4em;
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .fan-demo-card {
+    padding: 22px 18px 18px;
+  }
+  .fan-demo-card-row {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  /* The slider/curve + Speed panel don't fit side by side at this width —
+     the panel was overflowing off-card. Stack them instead. */
+  .fan-demo-control {
+    height: 132px;
+  }
+  .fan-demo-slider-row,
+  .fan-demo-curve {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .fan-demo-stat-panel {
+    flex: none;
+    width: 100%;
+  }
+  .fan-demo-curve-svg {
+    width: 150px;
+    align-self: center;
+  }
+  .fan-demo-stat {
+    padding: 8px 10px;
+  }
+}
