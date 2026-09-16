@@ -47,7 +47,11 @@ document.querySelectorAll(".buy-link").forEach((el) => {
 // published with a versioned filename silently turned the download button into a 404 while the
 // release page itself looked perfectly fine. This path is a plain file in this repo: if it is
 // wrong, it is wrong visibly, and it is fixed by pushing a commit.
-const DOWNLOAD_URL = "https://macbreeze.app/latest/MacBreeze.dmg";
+// Goes through the licence server, which adds one to a download count and redirects straight to
+// the file above. Static hosting keeps no logs at all, so without this there is no way to tell
+// whether anyone is downloading MacBreeze — only how many Macs later launch it, which is a
+// different and much later number. Nothing about the person is recorded, only the count.
+const DOWNLOAD_URL = "https://license.macbreeze.app/download";
 
 document.querySelectorAll(".download-link").forEach((el) => {
   el.addEventListener("click", (e) => {
