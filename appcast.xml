@@ -3,6 +3,32 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.10</title>
+            <pubDate>Fri, 18 Sep 2026 00:45:50 +0900</pubDate>
+            <sparkle:version>123</sparkle:version>
+            <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>A profile with a description no longer takes up half again as much room as the others — the description now sits beside the profile&#x27;s name.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.10.dmg" length="3343057" type="application/octet-stream" sparkle:edSignature="+BCZGz+VeWI79GtoU0e21qgyL42T26qx8TwTUHBdlsqCT9DI8UTnrYR/S+SJE2O1zGB6IHtjA1m5dq/SSKB/DA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze123-121.delta" sparkle:deltaFrom="121" length="161062" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PaDrbhbnYAIpjeNvVqCvKRlqn16FH+kHjCK82R01N5GvvYqYEZrhk9Tp+YoTHmZyA8ZjqOChkGBVIPQ/ivr4CA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze123-108.delta" sparkle:deltaFrom="108" length="377266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Sf9JRKhcW3VQNs8eiJh6NEHcbBe+kOCFBX10XjzxQS6Tc6p2G38NgJXxRS5Q85YygLqhKhE1giOroILeUi+hDg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze123-105.delta" sparkle:deltaFrom="105" length="416802" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Mgo3PA59n0NfxsvzFn/4QVqXvYcddkWNVeXHXGGSSF7FXOEd6iNMhw6J7/92LkzBtieMO0RW2Yw4yFkI17+tCw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze123-102.delta" sparkle:deltaFrom="102" length="427214" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="LJXYgnmsjG0rQGDMhMYFnhNPIwfchOZCvHk6yH5yRZxWO72NnwcLdta/uBwjBxvLkTU2lZ5Ziv/5AU8fn2MMDA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze123-99.delta" sparkle:deltaFrom="99" length="441302" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="3tVSwKKLc6OAPezU57GkxtCw6zuc9C9UUUXQDAKUvDenO02RJ6aUpHrluHlN/DLOql0JSnWe/XDKWCY3uIXzCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.9</title>
             <pubDate>Thu, 17 Sep 2026 13:15:42 +0900</pubDate>
             <sparkle:version>121</sparkle:version>
@@ -27,13 +53,6 @@
 <li>The dashboard dims behind this window, and the current-temperature dot on the fan curve is no longer hidden by its own dashed line.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.9.dmg" length="3340819" type="application/octet-stream" sparkle:edSignature="aKEtS+cF8UK7Y78GlZNjI2P7mJcCLo64rnwRY9sPffGFWSLz/Fv3+fRri9a2gDRG7Zjh+LTDZ3BFbK9MeFtWAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze121-108.delta" sparkle:deltaFrom="108" length="363814" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EjTy8/ZIvCnwaa3E4/7xqKeIDjgxg3kXLjDXis1vspoHKLmhL8WqY/uN5RZg57mc8JS9clL4hlRmdLwFUylpBA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze121-105.delta" sparkle:deltaFrom="105" length="406650" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="4bFcgfOuxz2bcJa0gnzamCR7/et8uPCwn0NT3bYJ64GjlicZoc1QEZGq+KHMjxOrXXzyhCqA3I+EiaYprT1eAw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze121-102.delta" sparkle:deltaFrom="102" length="413006" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="NqhnJ02hEnqzMr+p19M5PVNbgFfdb9jNpOx9ohuIoi2B+Gjdab4mikGZ07qVZNGrbS8WLesYsgaomBWh5DAZAA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze121-99.delta" sparkle:deltaFrom="99" length="431546" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="2waU6NONsp4YNq5oH2WaLyTWHCYIcDtg+eSs8PaMbLdzXBFYREpV+r08TqnjbLepcyiCjUlrLs/yLIX1fy2OBQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze121-97.delta" sparkle:deltaFrom="97" length="440430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="q1p2i9e4zbYhLVTCFkt5OSGIvGaCjNizAKSjBeKLnOtaG6imJOFJL7ygfYqvJvBAP9GLKbwav+vnWRdUna9ACw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.8</title>
@@ -56,29 +75,6 @@
 <li>After each update, MacBreeze shows what changed, in a window like this one.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.8.dmg" length="3315295" type="application/octet-stream" sparkle:edSignature="Go/gJEiQHjEJtJhrk4RSfIAstcHJFfCYsmQejY9YaBk/T1aG2Y9a42EDfA2qwKgx1+fqYOizJOMd96NUmO0BCg=="/>
-        </item>
-        <item>
-            <title>1.0.7</title>
-            <pubDate>Thu, 10 Sep 2026 21:38:22 +0900</pubDate>
-            <sparkle:version>105</sparkle:version>
-            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<h3>Fixed</h3>
-<ul>
-<li><strong>Fan controls looked frozen in the menu bar.</strong> While an app automation is running, MacBreeze locks the fan settings so the rule stays in charge — but the menu bar never said so. It now tells you which app is in control, and gives you a link straight to App Automations to change it.</li>
-<li><strong>The trial-ended notice could be missed.</strong> MacBreeze only checked your licence when it started, so if your trial ended while it was running you weren&#x27;t told until you next restarted it. It now checks once a day.</li>
-</ul>
-<h3>Privacy</h3>
-<p>MacBreeze now records the day your Mac last checked its licence, and whether it&#x27;s on a trial, the free version, or a paid licence, so we can count how many people use it. Nothing about how you use the app is recorded, and the record deletes itself after 90 days without a check-in. The details are in the privacy policy at macbreeze.app.</p>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.7.dmg" length="3283740" type="application/octet-stream" sparkle:edSignature="bkwz0KdipDLMJR1DYcP87FgNYz/O1DnvRs/ICPltFf+59Ve4vA99QKqpIkEa240b6D7UOzRcDBv045j2p8d8Aw=="/>
         </item>
     </channel>
 </rss>
