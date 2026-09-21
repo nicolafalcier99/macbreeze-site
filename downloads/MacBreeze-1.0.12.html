@@ -1,0 +1,17 @@
+<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>Fixed: Auto-Blast could stop engaging, leaving the fans low while the Mac ran hot. The fan helper keeps running across MacBreeze updates and restarts, and could hold on to an older safety temperature instead of the one showing in Safety. MacBreeze now checks that they agree and corrects the helper while it runs.</li>
+<li>The fan helper now updates along with MacBreeze, instead of asking for your password to reinstall it by hand after some updates. This is also what left it holding stale settings in the first place.</li>
+<li>App Automations now show what is happening, not just what each rule is set to do. The rule driving the fans is highlighted, and an app that is running but outranked by a rule above it is outlined rather than looking closed.</li>
+<li>The What&#x27;s New window no longer opens behind the dashboard, where it left the window in front looking blurred for no visible reason.</li>
+<li>The update window now opens in the middle of the screen, like the rest of MacBreeze&#x27;s windows.</li>
+<li>The menu bar panel now closes when you click MacBreeze&#x27;s own window, instead of staying open on top of it.</li>
+<li>The active profile is easier to pick out in the Profiles list.</li>
+</ul>
