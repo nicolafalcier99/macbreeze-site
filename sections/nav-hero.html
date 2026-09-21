@@ -30,11 +30,45 @@
     <p class="hero-note">macOS 14 Sonoma or later · Apple Silicon</p>
   </div>
 
-  <div class="hero-mockup">
-    <img
-      src="images/dashboard.png"
-      alt="MacBreeze dashboard showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans"
-      class="hero-screenshot reveal"
-    >
-  </div>
+  <!-- Live instrument, not a screenshot. Runs its own simulation (hero-instrument.js) with
+       its own ids — deliberately NOT sharing fan-demo.js's, since getElementById would
+       return whichever came first in the document and quietly wire the wrong panel. -->
+  <figure class="hero-instrument" aria-labelledby="hero-instrument-caption">
+    <div class="hero-instrument-frame">
+      <div class="hero-instrument-head">
+        <span class="hero-instrument-dot" aria-hidden="true"></span>
+        <span class="hero-instrument-mode" id="hero-mode">Auto</span>
+        <span class="hero-instrument-load" id="hero-load">Idle</span>
+      </div>
+
+      <div class="hero-instrument-readout">
+        <div class="hero-metric">
+          <span class="hero-metric-label">CPU</span>
+          <span class="hero-metric-value" id="hero-temp">48</span><span class="hero-metric-unit">°C</span>
+        </div>
+        <div class="hero-metric hero-metric-secondary">
+          <span class="hero-metric-label">Fans</span>
+          <span class="hero-metric-value" id="hero-rpm">1,760</span><span class="hero-metric-unit">rpm</span>
+        </div>
+      </div>
+
+      <svg class="hero-instrument-graph" id="hero-graph" viewBox="0 0 320 96" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="hero-graph-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="currentColor" stop-opacity="0.28"></stop>
+            <stop offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <path class="hero-graph-area" id="hero-graph-area" d=""></path>
+        <path class="hero-graph-line" id="hero-graph-line" d=""></path>
+      </svg>
+
+      <div class="hero-instrument-scale" aria-hidden="true">
+        <span>quiet</span><span>ramping</span><span>full</span>
+      </div>
+    </div>
+    <figcaption class="hero-instrument-caption" id="hero-instrument-caption">
+      A simulation of what MacBreeze does, not your Mac's live data.
+    </figcaption>
+  </figure>
 </section>

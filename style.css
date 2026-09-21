@@ -65,3 +65,39 @@ html {
   color: var(--color-accent);
   font-weight: 600;
 }
+
+:root {
+  /* Measured from the rendered nav: 16px padding top and bottom around a ~20px brand lockup,
+     plus its 1px border. Declared here rather than in tokens.css, which the section brief puts
+     off limits, and kept as a variable so the offset below cannot drift from the real height. */
+  --nav-height: 65px;
+}
+
+/* The sticky nav overlaps anything an in-page link jumps to — clicking "Features" or "FAQ" put
+   the heading underneath it. scroll-margin-top reserves the nav's own height plus a little air,
+   so the target lands below it instead of behind it. Applies to every anchor target on the page,
+   not just headings, since the nav sections are what the links actually point at. */
+:where(section[id], h2[id], h3[id]) {
+  scroll-margin-top: calc(var(--nav-height, 64px) + var(--space-3));
+}
+
+/* Visible only once focused, which is the entire point: keyboard users get a way past the nav,
+   everyone else never sees it. Positioned rather than hidden, so it is still in the tab order. */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}

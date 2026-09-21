@@ -14,16 +14,55 @@
   text-align: center;
 }
 
+/* Six columns rather than three, used as a bento: it is the smallest grid that lets a card be
+   two-thirds, one-third or full width without fractions. Three equal columns forced six equal
+   cards, which meant the always-on safety net — the feature that protects a machine whether or
+   not anyone paid — shouted exactly as loud as "Fan profiles". Sizing is the cheapest way to say
+   what matters most, and the page was spending none of it. */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--space-4);
 }
 
 .features-card {
   display: flex;
   flex-direction: column;
+  grid-column: span 2;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* The lead. Two-thirds of the row and its own type scale, because it is both the strongest
+   safety claim and a free one. */
+.features-card-lead {
+  grid-column: span 4;
+  justify-content: center;
+}
+.features-card-lead h3 {
+  font-size: calc(var(--font-size-h3) * 1.25);
+}
+.features-card-lead p {
+  font-size: var(--font-size-body);
+  max-width: 54ch;
+}
+
+/* A fact about compatibility, not a feature to weigh — so it gets the full width and the least
+   height, laid out sideways to stay short. */
+.features-card-strip {
+  grid-column: span 6;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-4);
+}
+.features-card-strip .features-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+.features-card-strip h3 {
+  margin-bottom: var(--space-1);
+}
+.features-strip-text {
+  min-width: 0;
 }
 .features-card:hover {
   transform: translateY(-3px);
@@ -59,6 +98,22 @@
   line-height: 1.5;
 }
 
+/* Deliberately quieter than the Pro tag: an outline, not a fill. "Free, always" is reassurance
+   and should read as a fact about the feature, while Pro is a badge doing sales work — giving
+   both the same solid blue pill made the free features look like upsells. */
+.features-free-tag {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-tertiary);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
 .features-pro-tag {
   display: inline-block;
   padding: 2px var(--space-2);
@@ -74,15 +129,40 @@
 
 /* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
 @media (max-width: 900px) {
+  /* Four columns, so the bento survives: the lead still takes a full row, the rest pair up.
+     Dropping straight to equal columns here would flatten the hierarchy on exactly the widths
+     where vertical space is scarcest and ordering matters most. */
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .features-card-lead,
+  .features-card-strip {
+    grid-column: span 4;
+  }
+  .features-card-lead h3 {
+    font-size: var(--font-size-h3);
   }
 }
 @media (max-width: 600px) {
   .features {
     padding: var(--space-6) var(--space-3);
   }
+  /* One column: at this width every card is full-bleed anyway, so size can no longer carry
+     emphasis and reading order does it instead — the lead is already first in the markup. */
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  .features-card,
+  .features-card-lead,
+  .features-card-strip {
+    grid-column: span 1;
+  }
+  .features-card-lead p {
+    font-size: var(--font-size-small);
+  }
+  /* Sideways at this width would leave the text a ribbon beside the icon. */
+  .features-card-strip {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

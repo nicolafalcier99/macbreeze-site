@@ -53,23 +53,92 @@
   box-shadow: var(--shadow-card);
 }
 
-.diagram-apps {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2);
+/* A stack in priority order, not a grid of app chips. The grid showed six apps as equals and
+   then claimed "profile switches automatically" — true, but it never showed the thing the copy
+   actually sells, which is what happens when two of those apps are open at the same time. An
+   ordered list can show that in one glance: two rules matching, the higher one winning. */
+.diagram-caption {
   width: 100%;
+  margin: 0;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
 }
 
-.diagram-app-chip {
+.diagram-rules {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.diagram-rule {
   display: flex;
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+/* Only the rules whose app is actually open are lit. The contrast between an open rule and a
+   closed one is what makes "the higher rule wins" legible without a sentence explaining it. */
+.diagram-rule.is-open {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+.diagram-rule.is-open .diagram-rule-state {
+  color: var(--color-text-secondary);
+}
+
+/* Three states, not two. "Open" and "winning" were drawn identically, so two rules lit the same
+   way left the reader to work out from the sentence below which one had actually won — which is
+   the one thing this picture exists to say. The winner gets the fill; merely-open keeps the
+   outline. */
+.diagram-rule.is-active {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+.diagram-rule.is-active .diagram-rule-state {
+  color: var(--color-accent);
+}
+
+/* The drag affordance, because priority order is something you set by dragging — a list that
+   looked fixed would make the ordering read as MacBreeze's decision rather than yours. */
+.diagram-rule-grip {
+  width: 10px;
+  height: 16px;
+  flex-shrink: 0;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 5px 5px;
+  opacity: 0.4;
+}
+
+.diagram-rule-app {
   font-weight: 600;
   color: var(--color-text);
+  white-space: nowrap;
+}
+
+.diagram-rule-trigger {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.diagram-rule-state {
+  margin-left: auto;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
 }
 
 .diagram-app-icon {
@@ -98,16 +167,6 @@
   border: 1px solid var(--color-border);
 }
 
-.diagram-result-icon {
-  width: 44px;
-  height: 44px;
-  margin: 0 auto var(--space-2);
-}
-.diagram-result-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .diagram-result-title {
   margin: 0 0 4px;
@@ -132,7 +191,9 @@
   .showcase {
     padding: var(--space-6) var(--space-3);
   }
-  .diagram-apps {
-    grid-template-columns: 1fr;
+  /* The trigger label is the first thing to go when width runs out — the app name and whether
+     it is open carry the point, and the stack must not wrap into two lines per rule. */
+  .diagram-rule-trigger {
+    display: none;
   }
 }

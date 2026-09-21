@@ -2,29 +2,46 @@
   <div class="showcase-inner">
     <div class="showcase-copy reveal">
       <h2>Set it once. It runs itself.</h2>
-      <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. The moment that app launches, MacBreeze switches to its profile automatically, and switches back the moment you quit. No manual toggling, nothing to remember.</p>
-      <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, with priority ordering when more than one could apply.</p>
+      <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. Choose whether it holds for as long as the app is running, or only while you’re actually working in it. MacBreeze switches the moment the app opens, switches back the moment you quit, and picks up apps that were already open when it started.</p>
+      <p class="showcase-lead">While an automation is driving your fans, the manual controls lock rather than accept a change the automation would overwrite a second later. Blast is the one exception — with a hot Mac in front of you, it still overrides everything.</p>
+      <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, and lets you drag them into priority order — when two apps are open at once, the rule nearest the top wins.</p>
     </div>
     <div class="showcase-diagram reveal d2">
-      <div class="diagram-apps">
-        <div class="diagram-app-chip"><img src="images/app-premiere.png" alt="" class="diagram-app-icon">Premiere Pro</div>
-        <div class="diagram-app-chip"><img src="images/app-davinci.png" alt="" class="diagram-app-icon">DaVinci Resolve</div>
-        <div class="diagram-app-chip"><img src="images/app-photoshop.png" alt="" class="diagram-app-icon">Photoshop</div>
-        <div class="diagram-app-chip"><img src="images/app-finalcut.png" alt="" class="diagram-app-icon">Final Cut Pro</div>
-        <div class="diagram-app-chip"><img src="images/app-aftereffects.png" alt="" class="diagram-app-icon">After Effects</div>
-        <div class="diagram-app-chip"><img src="images/app-blender.png" alt="" class="diagram-app-icon">Blender</div>
-      </div>
+      <p class="diagram-caption">Your rules, in priority order</p>
+
+      <ol class="diagram-rules">
+        <li class="diagram-rule is-open is-active">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-davinci.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">DaVinci Resolve</span>
+          <span class="diagram-rule-trigger">While running</span>
+          <span class="diagram-rule-state">Driving fans</span>
+        </li>
+        <li class="diagram-rule is-open">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-premiere.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">Premiere Pro</span>
+          <span class="diagram-rule-trigger">While running</span>
+          <span class="diagram-rule-state">Open</span>
+        </li>
+        <li class="diagram-rule">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-photoshop.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">Photoshop</span>
+          <span class="diagram-rule-trigger">While frontmost</span>
+          <span class="diagram-rule-state">Closed</span>
+        </li>
+      </ol>
+
       <div class="diagram-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" focusable="false">
           <path d="M12 3v16m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
+
       <div class="diagram-result">
-        <div class="diagram-result-icon">
-          <img src="images/logo-color.png" alt="" aria-hidden="true">
-        </div>
-        <p class="diagram-result-title">Profile switches automatically</p>
-        <p class="diagram-result-note">Fans ramp to match the moment the app opens, then ease back the instant you quit.</p>
+        <p class="diagram-result-title">DaVinci Resolve’s profile is running the fans</p>
+        <p class="diagram-result-note">Two apps match at once, so the higher rule wins. Drag Premiere above it and the fans follow, immediately.</p>
       </div>
     </div>
   </div>

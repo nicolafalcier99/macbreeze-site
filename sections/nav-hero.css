@@ -66,30 +66,59 @@
   background: transparent;
 }
 
-/* Hero */
+/* Hero
+   Deliberately asymmetric: copy left, a live instrument right. A centred hero over a dark
+   background is the single most recognisable "generated landing page" shape there is, and the
+   page was wearing it. Splitting it also lets the product demonstrate itself above the fold
+   instead of being described and then shown as a still.
+
+   Heat ramp kept LOCAL to this section rather than promoted into tokens.css — the brief says
+   tokens.css is not a section's to edit, and keeping it here means this is one file to revert.
+   These are data colours only: buttons and links stay on --color-accent, so the contrast work
+   already done in tokens.css is untouched. Values are Apple's own dark system colours, which
+   clear 4.5:1 on #000; the light-mode block below re-darkens them for #fafafa. */
 .hero {
+  --heat-cool: #5ac8fa;
+  --heat-warm: #ff9f0a;
+  --heat-hot: #ff453a;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
   max-width: 1100px;
   margin: 0 auto;
   padding: var(--space-7) var(--space-4) var(--space-6);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
+  gap: var(--space-6);
+}
+@media (prefers-color-scheme: light) {
+  .hero {
+    --heat-cool: #0071a4;
+    --heat-warm: #a75b00;
+    --heat-hot: #c02a21;
+  }
 }
 .hero-inner {
-  max-width: 640px;
-  text-align: center;
+  max-width: 560px;
 }
 .hero-headline {
   font-size: var(--font-size-hero);
   line-height: 1.08;
+  letter-spacing: var(--letter-spacing-tight);
   margin: 0;
+  text-wrap: balance;
 }
+/* The one word the whole product is about, carrying the same ramp the readout uses — cool at
+   rest through to hot. Blue here said nothing; an app about heat may as well show it. */
+/* The site's own blue, not the heat ramp. A gradient here was tried and dropped: the ramp earns
+   its place on the readout, where the colour is reporting a live value, but on the headline it
+   was decoration competing with the one word the sentence turns on. */
 .hero-accent {
   color: var(--color-accent);
 }
 .hero-subhead {
-  max-width: 560px;
-  margin: var(--space-4) auto 0;
+  max-width: 480px;
+  margin: var(--space-4) 0 0;
   font-size: var(--font-size-body);
   color: var(--color-text-secondary);
   line-height: 1.5;
@@ -97,7 +126,6 @@
 .hero-ctas {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--space-3);
   flex-wrap: wrap;
   margin-top: var(--space-5);
@@ -108,22 +136,193 @@
   color: var(--color-text-tertiary);
 }
 
-.hero-mockup {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: var(--space-6);
+/* Instrument */
+.hero-instrument {
+  margin: 0;
+  min-width: 0;
 }
-.hero-screenshot {
+.hero-instrument-frame {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  /* The frame carries the current heat colour and every child inherits it, so one property
+     write per tick re-tints the number, the trace and the dot together. */
+  color: var(--heat-cool);
+  transition: color 0.6s linear;
+}
+.hero-instrument-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+.hero-instrument-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.hero-instrument-mode {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.hero-instrument-load {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero-instrument-readout {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+}
+.hero-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.hero-metric-label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  margin-right: var(--space-2);
+}
+/* Monospace because the app's own readouts are monospaced, and because proportional digits
+   jitter the layout every time a value changes width. tabular-nums pins the rest. */
+.hero-metric-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: currentColor;
+}
+.hero-metric-unit {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+}
+.hero-metric-secondary .hero-metric-value {
+  font-size: 1.375rem;
+  color: var(--color-text-secondary);
+}
+.hero-instrument-graph {
   display: block;
   width: 100%;
-  max-width: 640px;
+  /* Taller than the 96px the viewBox implies, and stretched to fill it — the panel was mostly
+     empty between the readout and a short trace, which read as an unfinished box rather than an
+     instrument. preserveAspectRatio="none" on the element makes the stretch exact. */
+  height: 132px;
+  margin-top: var(--space-2);
+  overflow: visible;
+}
+.hero-graph-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-graph-area {
+  fill: url(#hero-graph-fill);
+  stroke: none;
+}
+/* Muted and dashed so it never competes with the temperature trace — this is the answer, not
+   the event. Its distance below the solid line is the lag worth noticing. */
+.hero-graph-fan {
+  fill: none;
+  stroke: var(--color-text-tertiary);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+
+/* A legend, because the panel previously labelled its x-axis "quiet / ramping / full" — fan-speed
+   words under a temperature trace, in the position an axis occupies. It read as a time scale and
+   described something the chart did not plot. Now each line says what it is, and the scale below
+   says what the horizontal actually is. */
+.hero-instrument-legend {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-tertiary);
+}
+.hero-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-legend-item::before {
+  content: "";
+  width: 14px;
+  height: 0;
+  flex-shrink: 0;
+  border-top: 2px solid currentColor;
+}
+.hero-legend-temp {
+  color: inherit; /* inherits the frame's live heat colour, matching the trace */
+}
+.hero-legend-fan {
+  color: var(--color-text-tertiary);
+}
+.hero-legend-fan::before {
+  border-top-style: dashed;
+}
+.hero-instrument-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-tertiary);
+}
+.hero-instrument-caption {
+  margin: var(--space-3) 0 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+/* Someone who has asked for less motion should not be given a self-animating chart. The panel
+   still renders its current values; it simply stops moving (hero-instrument.js checks the same
+   query and holds a static trace). */
+@media (prefers-reduced-motion: reduce) {
+  .hero-instrument-frame {
+    transition: none;
+  }
 }
 
 /* Responsive — extends the site's existing 900 / 760 / 600 breakpoints */
 @media (max-width: 900px) {
+  /* Below this the two columns would each be too narrow to read, so they stack and the hero
+     goes back to a single column — centred text, because a lone narrow column reads better
+     centred than ragged against one edge. */
   .hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
     padding-top: var(--space-6);
+  }
+  .hero-inner {
+    text-align: center;
+  }
+  .hero-subhead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+  .hero-instrument {
+    width: 100%;
+    max-width: 480px;
   }
 }
 @media (max-width: 760px) {

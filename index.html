@@ -6,6 +6,10 @@
 <title>MacBreeze</title>
 <meta name="description" content="MacBreeze is a fan control app for MacBook that manages your fans automatically — per-app profiles, safe overheat protection, and full manual control when you want it.">
 <link rel="icon" type="image/png" href="images/favicon.png">
+<!-- Matches the page background so the browser chrome does not sit in a different colour to
+     the page on iOS/Android. Two, because the site follows the system theme. -->
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="rotating-text.css">
@@ -20,6 +24,8 @@
 <link rel="stylesheet" href="sections/footer.css">
 </head>
 <body>
+
+<a class="skip-link" href="#hero">Skip to content</a>
 
 <header class="nav">
   <div class="nav-inner">
@@ -39,10 +45,10 @@
 
 <section id="hero" class="hero">
   <div class="hero-inner">
-    <h1 class="hero-headline">You'll never think about your <span class="hero-accent">fans</span> again.</h1>
+    <h1 class="hero-headline">You’ll never think about your <span class="hero-accent">fans</span> again.</h1>
     <p class="hero-subhead">
       MacBreeze watches your CPU, GPU, and battery, then manages your fans
-      automatically — quiet on a call, full speed the moment it's needed.
+      automatically — quiet on a call, full speed the moment it’s needed.
     </p>
     <div class="hero-ctas">
       <a href="#" class="btn btn-primary download-link">Download Free</a>
@@ -55,13 +61,55 @@
     <p class="hero-note">macOS 14 Sonoma or later · Apple Silicon</p>
   </div>
 
-  <div class="hero-mockup">
-    <img
-      src="images/dashboard.png"
-      alt="MacBreeze dashboard showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans"
-      class="hero-screenshot reveal"
-    >
-  </div>
+  <!-- Live instrument, not a screenshot. Runs its own simulation (hero-instrument.js) with
+       its own ids — deliberately NOT sharing fan-demo.js’s, since getElementById would
+       return whichever came first in the document and quietly wire the wrong panel. -->
+  <figure class="hero-instrument" aria-labelledby="hero-instrument-caption">
+    <div class="hero-instrument-frame">
+      <div class="hero-instrument-head">
+        <span class="hero-instrument-dot" aria-hidden="true"></span>
+        <span class="hero-instrument-mode" id="hero-mode">Auto</span>
+        <span class="hero-instrument-load" id="hero-load">Idle</span>
+      </div>
+
+      <div class="hero-instrument-readout">
+        <div class="hero-metric">
+          <span class="hero-metric-label">CPU</span>
+          <span class="hero-metric-value" id="hero-temp">48</span><span class="hero-metric-unit">°C</span>
+        </div>
+        <div class="hero-metric hero-metric-secondary">
+          <span class="hero-metric-label">Fans</span>
+          <span class="hero-metric-value" id="hero-rpm">1,760</span><span class="hero-metric-unit">rpm</span>
+        </div>
+      </div>
+
+      <div class="hero-instrument-legend" aria-hidden="true">
+        <span class="hero-legend-item hero-legend-temp">CPU temperature</span>
+        <span class="hero-legend-item hero-legend-fan">Fan speed</span>
+      </div>
+
+      <svg class="hero-instrument-graph" id="hero-graph" viewBox="0 0 320 96" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="hero-graph-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="currentColor" stop-opacity="0.28"></stop>
+            <stop offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <path class="hero-graph-area" id="hero-graph-area" d=""></path>
+        <!-- Fan speed sits under the temperature trace deliberately: it is the response, and the
+             gap between the two lines is the lag that the product is actually about. -->
+        <path class="hero-graph-fan" id="hero-graph-fan" d=""></path>
+        <path class="hero-graph-line" id="hero-graph-line" d=""></path>
+      </svg>
+
+      <div class="hero-instrument-scale" aria-hidden="true">
+        <span>20 seconds ago</span><span>now</span>
+      </div>
+    </div>
+    <figcaption class="hero-instrument-caption" id="hero-instrument-caption">
+      A simulation of what MacBreeze does, not your Mac’s live data.
+    </figcaption>
+  </figure>
 </section>
 
 <section id="features" class="features">
@@ -69,7 +117,17 @@
     <h2 class="features-heading">Everything your fans need. Nothing you have to manage.</h2>
 
     <div class="features-grid">
-      <div class="card features-card reveal d1">
+      <div class="card features-card features-card-lead reveal d1">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"/>
+          </svg>
+        </div>
+        <h3>Auto-Blast safety net <span class="features-free-tag">Free, always</span></h3>
+        <p>If things get too hot, MacBreeze locks your fans at full speed automatically, then eases back down once it’s genuinely safe again. It runs even when the app is closed, it can’t be switched off, and it overrides everything else you’ve set.</p>
+      </div>
+
+      <div class="card features-card reveal d2">
         <div class="features-icon">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <rect x="2" y="8" width="20" height="8" rx="4" stroke="currentColor" stroke-width="1.6"/>
@@ -77,7 +135,19 @@
           </svg>
         </div>
         <h3>Per-app automation</h3>
-        <p>Assign a fan profile to any app. It switches automatically the moment that app opens or quits. Free includes 1 automation and 2 profile slots — Pro is unlimited, with priority ordering when profiles overlap.</p>
+        <p>Assign a fan profile to any app. It switches the moment that app opens or quits. Free includes 1 automation and 2 profile slots — Pro is unlimited, with priority ordering when profiles overlap.</p>
+      </div>
+
+      <div class="card features-card reveal d1">
+        <div class="features-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <rect x="3" y="12" width="3.5" height="8" rx="1" fill="currentColor"/>
+            <rect x="10.25" y="6" width="3.5" height="14" rx="1" fill="currentColor"/>
+            <rect x="17.5" y="9" width="3.5" height="11" rx="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Full sensor monitoring <span class="features-free-tag">Free, always</span></h3>
+        <p>CPU, GPU, battery, per-core temperatures, and live energy draw — measured and shown right in your menu bar.</p>
       </div>
 
       <div class="card features-card reveal d2">
@@ -103,36 +173,16 @@
         <p>Save named speed profiles for gaming, calls, or rendering, then switch between them instantly. Free includes 2 slots, Pro is unlimited.</p>
       </div>
 
-      <div class="card features-card reveal d1">
-        <div class="features-icon">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-            <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"/>
-          </svg>
-        </div>
-        <h3>Auto-Blast safety net</h3>
-        <p>If things get too hot, MacBreeze locks your fans at full speed automatically, then eases back down once it's genuinely safe again. Free, always.</p>
-      </div>
-
-      <div class="card features-card reveal d2">
-        <div class="features-icon">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-            <rect x="3" y="12" width="3.5" height="8" rx="1" fill="currentColor"/>
-            <rect x="10.25" y="6" width="3.5" height="14" rx="1" fill="currentColor"/>
-            <rect x="17.5" y="9" width="3.5" height="11" rx="1" fill="currentColor"/>
-          </svg>
-        </div>
-        <h3>Full sensor monitoring</h3>
-        <p>CPU, GPU, battery, per-core temperatures, and live energy draw — measured and shown right in your menu bar. Free, always.</p>
-      </div>
-
-      <div class="card features-card reveal d3">
+      <div class="card features-card features-card-strip reveal d3">
         <div class="features-icon">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <path transform="translate(3,3) scale(0.75)" fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
           </svg>
         </div>
-        <h3>Works on every Apple Silicon Mac</h3>
-        <p>MacBreeze detects your hardware automatically, including fanless MacBook Air and Neo models, which get a free monitoring-only view.</p>
+        <div class="features-strip-text">
+          <h3>Works on every Apple Silicon Mac</h3>
+          <p>MacBreeze detects your hardware automatically, including fanless MacBook Air and Neo models, which get a free monitoring-only view.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -142,29 +192,46 @@
   <div class="showcase-inner">
     <div class="showcase-copy reveal">
       <h2>Set it once. It runs itself.</h2>
-      <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. The moment that app launches, MacBreeze switches to its profile automatically, and switches back the moment you quit. No manual toggling, nothing to remember.</p>
-      <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, with priority ordering when more than one could apply.</p>
+      <p class="showcase-lead">Pick a fan profile for any app — Premiere Pro, DaVinci Resolve, Photoshop, or whatever else tends to run hot. Choose whether it holds for as long as the app is running, or only while you’re actually working in it. MacBreeze switches the moment the app opens, switches back the moment you quit, and picks up apps that were already open when it started.</p>
+      <p class="showcase-lead">While an automation is driving your fans, the manual controls lock rather than accept a change the automation would overwrite a second later. Blast is the one exception — with a hot Mac in front of you, it still overrides everything.</p>
+      <p class="showcase-note">Free includes 1 active app automation. Pro unlocks unlimited automations, and lets you drag them into priority order — when two apps are open at once, the rule nearest the top wins.</p>
     </div>
     <div class="showcase-diagram reveal d2">
-      <div class="diagram-apps">
-        <div class="diagram-app-chip"><img src="images/app-premiere.png" alt="" class="diagram-app-icon">Premiere Pro</div>
-        <div class="diagram-app-chip"><img src="images/app-davinci.png" alt="" class="diagram-app-icon">DaVinci Resolve</div>
-        <div class="diagram-app-chip"><img src="images/app-photoshop.png" alt="" class="diagram-app-icon">Photoshop</div>
-        <div class="diagram-app-chip"><img src="images/app-finalcut.png" alt="" class="diagram-app-icon">Final Cut Pro</div>
-        <div class="diagram-app-chip"><img src="images/app-aftereffects.png" alt="" class="diagram-app-icon">After Effects</div>
-        <div class="diagram-app-chip"><img src="images/app-blender.png" alt="" class="diagram-app-icon">Blender</div>
-      </div>
+      <p class="diagram-caption">Your rules, in priority order</p>
+
+      <ol class="diagram-rules">
+        <li class="diagram-rule is-open is-active">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-davinci.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">DaVinci Resolve</span>
+          <span class="diagram-rule-trigger">While running</span>
+          <span class="diagram-rule-state">Driving fans</span>
+        </li>
+        <li class="diagram-rule is-open">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-premiere.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">Premiere Pro</span>
+          <span class="diagram-rule-trigger">While running</span>
+          <span class="diagram-rule-state">Open</span>
+        </li>
+        <li class="diagram-rule">
+          <span class="diagram-rule-grip" aria-hidden="true"></span>
+          <img src="images/app-photoshop.png" alt="" class="diagram-app-icon" width="88" height="88" loading="lazy" decoding="async">
+          <span class="diagram-rule-app">Photoshop</span>
+          <span class="diagram-rule-trigger">While frontmost</span>
+          <span class="diagram-rule-state">Closed</span>
+        </li>
+      </ol>
+
       <div class="diagram-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" focusable="false">
           <path d="M12 3v16m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
+
       <div class="diagram-result">
-        <div class="diagram-result-icon">
-          <img src="images/logo-color.png" alt="" aria-hidden="true">
-        </div>
-        <p class="diagram-result-title">Profile switches automatically</p>
-        <p class="diagram-result-note">Fans ramp to match the moment the app opens, then ease back the instant you quit.</p>
+        <p class="diagram-result-title">DaVinci Resolve’s profile is running the fans</p>
+        <p class="diagram-result-note">Two apps match at once, so the higher rule wins. Drag Premiere above it and the fans follow, immediately.</p>
       </div>
     </div>
   </div>
@@ -172,8 +239,8 @@
 
 <section id="fan-demo" class="fan-demo">
   <div class="fan-demo-inner">
-    <h2 class="fan-demo-heading reveal">Four ways to run your fans.</h2>
-    <p class="fan-demo-subhead reveal">Auto, Manual, Sensor, or Blast — try it yourself. Simulated, not your Mac's live data.</p>
+    <h2 class="fan-demo-heading reveal">Three ways to run your fans. One that overrides them.</h2>
+    <p class="fan-demo-subhead reveal">Auto leaves them to macOS. Manual pins a speed and holds it. Sensor follows a temperature curve you draw. Blast takes every fan to full until you let go, then hands them back exactly as you had them. Try it below — the readings are simulated, not your Mac.</p>
 
     <div class="fan-demo-stage reveal d2">
       <div class="fan-demo-card" id="fan-demo-card">
@@ -235,9 +302,9 @@
           <span class="fan-demo-card-label">Simulate an app</span>
           <div class="fan-demo-apps" id="fan-demo-apps">
             <button class="fan-demo-app active" data-app="none" type="button">None</button>
-            <button class="fan-demo-app" data-app="resolve" type="button"><img src="images/app-davinci.png" alt="" class="fan-demo-app-icon">DaVinci Resolve</button>
-            <button class="fan-demo-app" data-app="blender" type="button"><img src="images/app-blender.png" alt="" class="fan-demo-app-icon">Blender</button>
-            <button class="fan-demo-app" data-app="ai" type="button"><img src="images/app-claude.png" alt="" class="fan-demo-app-icon">Claude</button>
+            <button class="fan-demo-app" data-app="resolve" type="button"><img src="images/app-davinci.png" alt="" class="fan-demo-app-icon" width="88" height="88" loading="lazy" decoding="async">DaVinci Resolve</button>
+            <button class="fan-demo-app" data-app="blender" type="button"><img src="images/app-blender.png" alt="" class="fan-demo-app-icon" width="88" height="88" loading="lazy" decoding="async">Blender</button>
+            <button class="fan-demo-app" data-app="ai" type="button"><img src="images/app-claude.png" alt="" class="fan-demo-app-icon" width="88" height="88" loading="lazy" decoding="async">Claude</button>
           </div>
         </div>
         <p class="fan-demo-lock-note" id="fan-demo-lock-note" hidden>Locked by App Automation — <strong id="fan-demo-lock-app"></strong> is running.</p>
@@ -279,12 +346,12 @@
         </button>
       </div>
       <div class="tour-viewer reveal d2">
-        <img src="images/tour-overview.png" alt="MacBreeze Overview tab showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans" class="tour-image" data-tour-image="overview">
-        <img src="images/tour-menubar.png" alt="The MacBreeze menu bar panel showing the active profile, Fans Linked status, CPU, GPU, battery, and Wi-Fi temperatures, power draw, and the Auto, Manual, and Sensor fan mode picker beside the Blast button" class="tour-image" data-tour-image="menubar" hidden>
-        <img src="images/tour-profiles.png" alt="MacBreeze Profiles tab showing Default, Quiet, and AI - LLM speed profiles" class="tour-image" data-tour-image="profiles" hidden>
-        <img src="images/tour-automations.png" alt="MacBreeze App Automations tab showing DaVinci Resolve and Affinity with per-app fan behavior" class="tour-image" data-tour-image="automations" hidden>
-        <img src="images/tour-safety.png" alt="MacBreeze Safety tab showing the Auto-Blast trigger temperature and overheat notification settings" class="tour-image" data-tour-image="safety" hidden>
-        <img src="images/tour-preferences.png" alt="MacBreeze Preferences tab showing temperature units, menu bar display, and startup options" class="tour-image" data-tour-image="preferences" hidden>
+        <img src="images/tour-overview.png" alt="MacBreeze Overview tab showing live CPU, GPU, battery, and Wi-Fi temperatures, power draw, and an editable temperature-to-speed fan curve with linked left and right fans" class="tour-image" data-tour-image="overview" width="1680" height="1250" loading="lazy" decoding="async">
+        <img src="images/tour-menubar.png" alt="The MacBreeze menu bar panel showing the active profile, Fans Linked status, CPU, GPU, battery, and Wi-Fi temperatures, power draw, and the Auto, Manual, and Sensor fan mode picker beside the Blast button" class="tour-image" data-tour-image="menubar" hidden width="1680" height="1250" loading="lazy" decoding="async">
+        <img src="images/tour-profiles.png" alt="MacBreeze Profiles tab showing Default, Quiet, and AI - LLM speed profiles" class="tour-image" data-tour-image="profiles" hidden width="1680" height="1250" loading="lazy" decoding="async">
+        <img src="images/tour-automations.png" alt="MacBreeze App Automations tab showing DaVinci Resolve and Affinity with per-app fan behavior" class="tour-image" data-tour-image="automations" hidden width="1680" height="1250" loading="lazy" decoding="async">
+        <img src="images/tour-safety.png" alt="MacBreeze Safety tab showing the Auto-Blast trigger temperature and overheat notification settings" class="tour-image" data-tour-image="safety" hidden width="1680" height="1250" loading="lazy" decoding="async">
+        <img src="images/tour-preferences.png" alt="MacBreeze Preferences tab showing temperature units, menu bar display, and startup options" class="tour-image" data-tour-image="preferences" hidden width="1680" height="1250" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -444,7 +511,7 @@
         </h3>
         <div class="faq-content-wrap" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
           <div class="faq-content-inner">
-            <p>Controlling fan speed needs a small privileged helper — macOS's standard way of allowing safe, limited hardware access. MacBreeze installs it with one click and one password prompt, the same dialog you'd see installing any Mac utility. Monitoring alone needs no special access at all.</p>
+            <p>Controlling fan speed needs a small privileged helper — macOS’s standard way of allowing safe, limited hardware access. MacBreeze installs it with one click and one password prompt, the same dialog you’d see installing any Mac utility. Monitoring alone needs no special access at all.</p>
           </div>
         </div>
       </div>
@@ -486,7 +553,7 @@
         </h3>
         <div class="faq-content-wrap" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4">
           <div class="faq-content-inner">
-            <p>Your license works on one Mac at a time, and moving it is free — just sign in on the new machine, as often as you like, as long as it can check in online. You can also link a license permanently to one Mac for full offline use, but that's irreversible: that Mac keeps its slot forever, so if it's sold or replaced the slot goes with it, and a linked license can no longer be refunded. On a 4-Pack each Mac is linked separately, and if you link all four the license is frozen — no Mac can be added, removed or swapped after that.</p>
+            <p>Your license works on one Mac at a time, and moving it is free — just sign in on the new machine, as often as you like, as long as it can check in online. You can also link a license permanently to one Mac for full offline use, but that’s irreversible: that Mac keeps its slot forever, so if it’s sold or replaced the slot goes with it, and a linked license can no longer be refunded. On a 4-Pack each Mac is linked separately, and if you link all four the license is frozen — no Mac can be added, removed or swapped after that.</p>
           </div>
         </div>
       </div>
@@ -500,9 +567,9 @@
         </h3>
         <div class="faq-content-wrap" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5">
           <div class="faq-content-inner">
-            <p>Yes. Email us within 14 days of buying and we'll refund you in full, no questions asked. There's also a 14-day free trial before you pay anything, so you can check MacBreeze works on your Mac first.</p>
+            <p>Yes. Email us within 14 days of buying and we’ll refund you in full, no questions asked. There’s also a 14-day free trial before you pay anything, so you can check MacBreeze works on your Mac first.</p>
             <p>One exception: if you permanently link a Mac for offline use, that licence is no longer refundable. Linking is irreversible and leaves MacBreeze unlocked on that machine forever, with nothing left for us to take back. On a 4-Pack this applies to the whole licence — linking any one of the four ends the refund for all of them.</p>
-            <p>You never have to link a Mac. It's optional, MacBreeze works normally without it, and the app explains the consequences and asks you to confirm before anything happens.</p>
+            <p>You never have to link a Mac. It’s optional, MacBreeze works normally without it, and the app explains the consequences and asks you to confirm before anything happens.</p>
           </div>
         </div>
       </div>
@@ -516,7 +583,7 @@
         </h3>
         <div class="faq-content-wrap" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6">
           <div class="faq-content-inner">
-            <p>Yes. MacBreeze detects fanless Macs automatically and switches to a monitoring-only view. Since there are no fans to control, it's fully free on those machines.</p>
+            <p>Yes. MacBreeze detects fanless Macs automatically and switches to a monitoring-only view. Since there are no fans to control, it’s fully free on those machines.</p>
           </div>
         </div>
       </div>
@@ -546,5 +613,6 @@
 <script src="script.js"></script>
 <script src="rotating-text.js"></script>
 <script src="fan-demo.js"></script>
+<script src="hero-instrument.js"></script>
 </body>
 </html>

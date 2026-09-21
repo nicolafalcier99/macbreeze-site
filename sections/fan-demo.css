@@ -8,6 +8,9 @@
 }
 
 .fan-demo-heading {
+  /* Stops the second line landing as a single orphaned word ("them."), which the two-sentence
+     title does at most desktop widths. */
+  text-wrap: balance;
   font-size: var(--font-size-h2);
   line-height: 1.15;
   margin: 0 0 var(--space-2);
@@ -15,9 +18,14 @@
 }
 
 .fan-demo-subhead {
-  margin: 0 0 var(--space-5);
+  /* Capped and centred: this now carries four sentences, and left to the section's full width
+     it set ~140-character lines, far past the point where the eye reliably finds the start of
+     the next one. */
+  max-width: 62ch;
+  margin: 0 auto var(--space-5);
   text-align: center;
   font-size: var(--font-size-body);
+  line-height: 1.55;
   color: var(--color-text-secondary);
 }
 
