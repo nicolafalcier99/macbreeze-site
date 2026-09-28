@@ -29,6 +29,21 @@
   text-align: left;
 }
 
+.pricing-more {
+  margin: var(--space-4) 0 0;
+  text-align: center;
+}
+.pricing-more a {
+  color: var(--color-accent);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-decoration: none;
+}
+.pricing-more a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
 .pricing-card {
   display: flex;
   flex-direction: column;

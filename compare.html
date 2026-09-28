@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBreeze vs Other Fan Control Apps</title>
+<meta name="description" content="How MacBreeze compares to Macs Fan Control and TG Pro: automatic per-app fan profiles, a safety net that can't be switched off, and one-time pricing.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  /* Compare page chrome — standalone page, not spliced from sections/, same
+     tokens.css-driven look as privacy.html / pricing.html / how-it-works.html. */
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-nav-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .nav-brand-mark {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    -webkit-mask-image: url("images/logo-mark.png");
+    mask-image: url("images/logo-mark.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+  .nav-links a {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+  .nav-links a:hover {
+    color: var(--color-text);
+    background: var(--color-border);
+  }
+  .nav-links a.nav-cta {
+    color: var(--color-accent);
+    padding-right: var(--space-2);
+  }
+  .nav-links a.nav-cta:hover {
+    color: var(--color-accent-hover);
+    background: transparent;
+  }
+
+  .compare-hero {
+    padding: var(--space-7) var(--space-4) var(--space-5);
+    text-align: center;
+  }
+  .compare-hero-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .compare-hero h1 {
+    font-size: var(--font-size-h2);
+    line-height: 1.15;
+    margin: 0;
+  }
+  .compare-hero p {
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+  }
+  .compare-hero-note {
+    margin: var(--space-4) 0 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-tertiary);
+  }
+
+  .compare {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-7);
+  }
+  .compare-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+  table.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-small);
+    min-width: 640px;
+  }
+  .compare-table th,
+  .compare-table td {
+    padding: var(--space-3);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+  .compare-table td:first-child,
+  .compare-table th:first-child {
+    text-align: left;
+    color: var(--color-text);
+    font-weight: 500;
+    min-width: 220px;
+  }
+  .compare-table thead th {
+    font-size: var(--font-size-body);
+    font-weight: 700;
+    background: var(--color-bg);
+  }
+  .compare-table thead th.is-macbreeze {
+    color: var(--color-accent);
+  }
+  .compare-table tbody tr:last-child td { border-bottom: none; }
+  .compare-table .compare-check {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  .compare-table .compare-dash {
+    color: var(--color-text-tertiary);
+  }
+  .compare-table td.is-macbreeze-col {
+    background: color-mix(in srgb, var(--color-accent) 6%, transparent);
+  }
+  .compare-caveat {
+    margin: var(--space-3) 0 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-tertiary);
+    line-height: 1.6;
+  }
+  .compare-caveat a {
+    color: var(--color-text-tertiary);
+  }
+
+  .compare-cta {
+    text-align: center;
+    padding: 0 var(--space-4) var(--space-7);
+  }
+
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-6) var(--space-4);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .footer-brand-mark {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    -webkit-mask-image: url("images/logo-mark.png");
+    mask-image: url("images/logo-mark.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .footer-links a {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .footer-links a:hover {
+    color: var(--color-text);
+  }
+  .footer-brand:focus-visible,
+  .footer-links a:focus-visible,
+  .nav-brand:focus-visible,
+  .nav-links a:focus-visible,
+  .compare-cta a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  @media (max-width: 760px) {
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--space-3);
+    }
+  }
+  @media (max-width: 600px) {
+    .nav-links a:not(.nav-cta) {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html#hero" class="nav-brand">
+      <span class="nav-brand-mark" aria-hidden="true"></span>
+      MacBreeze
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#pricing" class="nav-cta">Get MacBreeze</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="compare-hero">
+    <div class="compare-hero-inner">
+      <h1>MacBreeze vs Macs Fan Control vs TG Pro</h1>
+      <p>All three read your Mac's real temperatures and let you control its fans — the difference is what happens automatically, without you opening the app.</p>
+      <p class="compare-hero-note">Feature and pricing details below were checked directly against each app's own site. Prices and features can change on their end — worth a quick check before buying if it's been a while.</p>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col" class="is-macbreeze">MacBreeze</th>
+            <th scope="col">Macs Fan Control</th>
+            <th scope="col">TG Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price</td>
+            <td class="is-macbreeze-col">$15 one-time, or free with limits</td>
+            <td>Free, Pro is one-time per Mac</td>
+            <td>One-time, no free version</td>
+          </tr>
+          <tr>
+            <td>Subscription</td>
+            <td class="is-macbreeze-col"><span class="compare-dash">Never</span></td>
+            <td><span class="compare-dash">Never</span></td>
+            <td><span class="compare-dash">Never</span></td>
+          </tr>
+          <tr>
+            <td>Free trial of the paid tier</td>
+            <td class="is-macbreeze-col">14 days, no card</td>
+            <td class="compare-dash">—</td>
+            <td class="compare-dash">—</td>
+          </tr>
+          <tr>
+            <td>Fan profiles switch automatically per app</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span> — set once, applies and releases on its own</td>
+            <td>Presets you switch by hand</td>
+            <td>Temperature-based rules, not per-app</td>
+          </tr>
+          <tr>
+            <td>Priority order when more than one app matches</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
+            <td class="compare-dash">—</td>
+            <td class="compare-dash">—</td>
+          </tr>
+          <tr>
+            <td>Safety net that can't be switched off, even on free</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
+            <td class="compare-dash">—</td>
+            <td class="compare-dash">—</td>
+          </tr>
+          <tr>
+            <td>Visual sensor curves (drag a temperature-to-speed graph)</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span> (Pro)</td>
+            <td class="compare-dash">—</td>
+            <td class="compare-dash">—</td>
+          </tr>
+          <tr>
+            <td>Native SwiftUI, no Electron</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Full refund window</td>
+            <td class="is-macbreeze-col">14 days, no questions asked</td>
+            <td class="compare-dash">—</td>
+            <td class="compare-dash">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-caveat">
+      Macs Fan Control and TG Pro are both long-running, well-regarded tools — this table is about one specific thing MacBreeze was built around (fans that follow what you're running, on their own) rather than a claim that either is worse overall. Sources: <a href="https://crystalidea.com/macs-fan-control" target="_blank" rel="noopener">crystalidea.com/macs-fan-control</a>, <a href="https://www.tunabellysoftware.com/tgpro/" target="_blank" rel="noopener">tunabellysoftware.com/tgpro</a>.
+    </p>
+  </section>
+
+  <div class="compare-cta">
+    <a href="index.html#pricing" class="btn btn-primary">Try MacBreeze free</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html#hero" class="footer-brand" aria-label="MacBreeze home">
+      <span class="footer-brand-mark" aria-hidden="true"></span>
+      MacBreeze
+    </a>
+    <p class="footer-copyright">© <span id="year"></span> MacBreeze. Built for MacBook.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="how-it-works.html">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@macbreeze.app">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
