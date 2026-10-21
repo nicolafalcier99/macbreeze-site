@@ -1,0 +1,15 @@
+<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>Auto-Blast no longer goes off on a brief temperature spike. It now waits for 4 seconds of continuous heat before running the fans at full speed. If macOS itself reports a critical temperature, Auto-Blast still starts straight away.</li>
+<li>When Auto-Blast ends, the fans now slow down step by step over a few seconds instead of dropping straight back to normal speed.</li>
+<li>The battery&#x27;s charge and drain time now appears within seconds of plugging in or unplugging. MacBreeze reads the same estimate macOS uses for its own battery icon, instead of waiting many minutes to work it out itself.</li>
+<li>The menu bar item&#x27;s text is now centered, and the Compact size is noticeably smaller.</li>
+<li>Fixed: after you reinstalled the fan helper, the &quot;not on the latest version&quot; warning could stay on screen even though the helper was up to date.</li>
+</ul>

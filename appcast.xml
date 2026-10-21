@@ -3,6 +3,61 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.15</title>
+            <pubDate>Thu, 22 Oct 2026 00:29:18 +0900</pubDate>
+            <sparkle:version>159</sparkle:version>
+            <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>A new look. The window&#x27;s backgrounds now match each other in light and dark mode, the MacBreeze name sits centred at the top, and one MacBreeze blue is used throughout. Warm and hot colours are easier to read in light mode.</li>
+<li>The Overview shows CPU and GPU in cards of their own: the temperature, a word for how hot it is (Normal, Warm or Hot), and a graph of the last five minutes. Battery, Wi-Fi, power draw and battery drain sit in a row underneath.</li>
+<li>Temperatures for each CPU core are now an option in Preferences, off by default. While it is off, MacBreeze doesn&#x27;t read them at all.</li>
+<li>The menu bar panel shows CPU and GPU first and larger, with the same words, and the speed of each fan.</li>
+<li>Profiles and App Automations now say what each one sets, with a small picture of its fan curve. When two automated apps are open at once, you choose plainly which one wins: the app in front, or the one higher in the list.</li>
+<li>The fan curve editor is cleaner: temperatures in even 10° steps, a dot showing where your fans are right now, and no legend to read.</li>
+<li>If the fan helper stops responding, for example when macOS blocks it after a restart, MacBreeze now reinstalls it on its own, up to five times, instead of waiting for you to click Reinstall.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.15.dmg" length="3482903" type="application/octet-stream" sparkle:edSignature="vlAoRE7tRgNp8FF4lo37vqrMOvB4KmAjpcaQtxRrBGt7SWQb70judQwQtGsjrVEE6QneAw6+Wp9va2Welt3CAg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-156.delta" sparkle:deltaFrom="156" length="505094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W6VuhAUEXUdjIdG3sKm2K+JWP+uIZvbEpjJdbS66fHSpw0A6UHAHEY3sJrjkNkSwmYMFYlGeHobSbc3Bb4KQDA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-150.delta" sparkle:deltaFrom="150" length="547746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DNo92FeYOsAKJRF3dxfgO0op3hPNMePc6Vmyi7jvQ8ESOvv49zNNa6IduiLpfTjgf1dl0iKiNEx5uRN/OOA+Dg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-143.delta" sparkle:deltaFrom="143" length="1018962" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6xGngk2jecnH+50tMTcDiHKz0ffjaSWyJozVD1rbKJeFL1YjvxfTDS+43RmTkOOTb9Zgwb3IbJeRnBIpeObUAQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-136.delta" sparkle:deltaFrom="136" length="1050470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="pyUh3FfH6YXctKPMJ01h/hOygmd9RJsHeHGVauFyRG5ncqflWrElyCaCY0A4BqgECxXPC5bmU6yhZGxr1I/HDw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-123.delta" sparkle:deltaFrom="123" length="1072454" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="79/3w4pc4O2y9FUbNF5FvsocDoxSRqAXbapnd81Ed9Ok64Ftiy0DIuSvfyfcvKxUeyTQMSO0HEun8sfoze0MBA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>1.0.14</title>
+            <pubDate>Thu, 15 Oct 2026 19:04:08 +0900</pubDate>
+            <sparkle:version>156</sparkle:version>
+            <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>Auto-Blast no longer goes off on a brief temperature spike. It now waits for 4 seconds of continuous heat before running the fans at full speed. If macOS itself reports a critical temperature, Auto-Blast still starts straight away.</li>
+<li>When Auto-Blast ends, the fans now slow down step by step over a few seconds instead of dropping straight back to normal speed.</li>
+<li>The battery&#x27;s charge and drain time now appears within seconds of plugging in or unplugging. MacBreeze reads the same estimate macOS uses for its own battery icon, instead of waiting many minutes to work it out itself.</li>
+<li>The menu bar item&#x27;s text is now centered, and the Compact size is noticeably smaller.</li>
+<li>Fixed: after you reinstalled the fan helper, the &quot;not on the latest version&quot; warning could stay on screen even though the helper was up to date.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.14.dmg" length="3400888" type="application/octet-stream" sparkle:edSignature="KkTIV5dNQbmEC3ejd2Rbkg+iztunH5809SbGfCK9Gx1Qq6RH74iyuIoIJyfc2QfmPH3/VhGSV2dlp7xBoCgqDA=="/>
+        </item>
+        <item>
             <title>1.0.13</title>
             <pubDate>Fri, 25 Sep 2026 12:06:19 +0900</pubDate>
             <sparkle:version>150</sparkle:version>
@@ -24,64 +79,6 @@
 <li>Fixed: the battery hourglass could stay up forever at ordinary drain rates and never settle on a reading.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.13.dmg" length="3391317" type="application/octet-stream" sparkle:edSignature="n2591NBbkh150bF01lYID9cC3xuLa97w17LZBqpMsJw8LhTew+aZ9nxGDDRngTtyxlBSR3TSRHH3DwKKACUgAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze150-143.delta" sparkle:deltaFrom="143" length="860878" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="IbYc93f3Dp1N2B/CFhPQdg6ul0iF6rrXvdhDBcYZq4gjNSYmgTa5EbCQreaQ89x7ZfJgPknSqyNzFH6QM3HdAA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze150-136.delta" sparkle:deltaFrom="136" length="907498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HXViyVMiJSmwXPQcOkF7DadvAupx5mnIhVTbznoztijnMJuWIT9CL/ycvIKAb68z9zXW428D1pSTvaRClM51Dw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze150-123.delta" sparkle:deltaFrom="123" length="936702" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="987gjy0GocxyU/lZAC+B6j4uqHqE++iXY7dPJiFqiCzbElDHOnYLXlKd8taucdbm6O6ZqqSyghO/kMkunAvODg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze150-121.delta" sparkle:deltaFrom="121" length="943086" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OorhQU/MAMAoTtFWAj4xna7me4oCDxRLP4qPD6LDnMolGdhSOrhHseZb7989vrqmM1lWadjBbEYUJuMoFvKbDg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze150-108.delta" sparkle:deltaFrom="108" length="979906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8n9Tt+EKOm/l3VCuIXbm5FmjAt90PQg+AFzxQmZ50MrMwOmH081Ol50QMl+QvXi/OBglPX9C8qqYrdmLUvPhAw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.0.12</title>
-            <pubDate>Mon, 21 Sep 2026 09:49:26 +0900</pubDate>
-            <sparkle:version>143</sparkle:version>
-            <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>Fixed: Auto-Blast could stop engaging, leaving the fans low while the Mac ran hot. The fan helper keeps running across MacBreeze updates and restarts, and could hold on to an older safety temperature instead of the one showing in Safety. MacBreeze now checks that they agree and corrects the helper while it runs.</li>
-<li>The fan helper now updates along with MacBreeze, instead of asking for your password to reinstall it by hand after some updates. This is also what left it holding stale settings in the first place.</li>
-<li>App Automations now show what is happening, not just what each rule is set to do. The rule driving the fans is highlighted, and an app that is running but outranked by a rule above it is outlined rather than looking closed.</li>
-<li>The What&#x27;s New window no longer opens behind the dashboard, where it left the window in front looking blurred for no visible reason.</li>
-<li>The update window now opens in the middle of the screen, like the rest of MacBreeze&#x27;s windows.</li>
-<li>The menu bar panel now closes when you click MacBreeze&#x27;s own window, instead of staying open on top of it.</li>
-<li>The active profile is easier to pick out in the Profiles list.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.12.dmg" length="3389988" type="application/octet-stream" sparkle:edSignature="zNN51C0pjcl6yk+JbTVLnzP3oW41Z5Gpdno6sXBESEz3o/59PJH6yeb1GjuZ+3AZonI6kNy48wJdITu/XQwABA=="/>
-        </item>
-        <item>
-            <title>1.0.11</title>
-            <pubDate>Fri, 18 Sep 2026 17:09:24 +0900</pubDate>
-            <sparkle:version>136</sparkle:version>
-            <sparkle:shortVersionString>1.0.11</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>The menu bar readout has a Compact setting: the same readings in smaller type, for a menu bar that is already full. MacBreeze&#x27;s own icon can be hidden too, leaving just the numbers.</li>
-<li>Right-click the menu bar icon for quick actions: Blast, Open Dashboard, Quit.</li>
-<li>Clicking the menu bar icon no longer flashes a dark box behind it.</li>
-<li>MacBreeze can leave the Dock while its window is closed, so it lives in the menu bar alone. Turn it off in Preferences if you want the Dock icon and app menu always there.</li>
-<li>Blast no longer makes the fan mode picker jump to Auto. Your setting stays on screen and comes back when Blast ends.</li>
-<li>Each fan&#x27;s real speed now stays visible while an app automation is running.</li>
-<li>Descriptions under settings no longer run underneath the switch they describe.</li>
-<li>In your licence&#x27;s device list, &quot;This Mac&quot; and the Mac that manages the licence are now marked in colour.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.11.dmg" length="3359362" type="application/octet-stream" sparkle:edSignature="OjajJUblRVIxixsTxceDsm/9KdR6r91AC9ErFDjsRyGDYkJLSAPhAflQeUMr9VYM5VYYjh8ojygJFBxxv4P3BQ=="/>
         </item>
     </channel>
 </rss>
