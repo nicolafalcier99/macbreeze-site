@@ -3,6 +3,43 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.17</title>
+            <pubDate>Sun, 01 Nov 2026 17:01:29 +0900</pubDate>
+            <sparkle:version>173</sparkle:version>
+            <sparkle:shortVersionString>1.0.17</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>New</h3>
+<ul>
+<li>Blast is available straight away after Auto-Blast. If the fans are still easing down, pressing Blast takes them to full speed at once.</li>
+<li>Your curve stays selected while Blast is on. The picker keeps showing Curve, and the curve takes over again when Blast ends.</li>
+</ul>
+<h3>Improved</h3>
+<ul>
+<li>The title bar has a frosted glass blur behind the app name when content scrolls under it.</li>
+<li>The divider lines beside the sidebar and under the title bar are gone.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>The What&#x27;s New panel had no notes to show for 1.0.16. Notes are now bundled with each release.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.17.dmg" length="3507816" type="application/octet-stream" sparkle:edSignature="WnTr8aLFwbnpjbm+Y2LZKxO1jga27+8GrMCQuGVnyhcY8yJenhyRKsc9ZVNlmEngRFTw/6TsDipvGrDdg9rwAw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-163.delta" sparkle:deltaFrom="163" length="197194" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8QKvNl0X7L94p0wtAdIVPQSkrxos4ybcya+mk+wOWVweaqkoOE1ELFP2y9ja2TINb1KY/gteSOu4tPRWDh7JDg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-159.delta" sparkle:deltaFrom="159" length="345266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="F8zKIqW9HnAuPoVCpvRwmrPE8vUKpW2xePtO6arnksujy1SAUdSw7QKK+WwYDNsNuA5f7QixHXEEC0hn6ZWEAg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-156.delta" sparkle:deltaFrom="156" length="566378" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6l6/xrvZQNg+YFbOYma9jeIQ+QoZxnZ9Z9XF7luOkuB2nSDS6WjEnU9GdTLMZy/qX7kST/NPH7TOuY3kmwxWAw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-150.delta" sparkle:deltaFrom="150" length="599266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cTkMG+njn9MWdQ7VlGMO0JXLNYjlFmpmxc/ULtnVVcWiqg7VlYRHA5PNnQftLfTJekghgRxocj1QeC88RqCeDA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-143.delta" sparkle:deltaFrom="143" length="1047922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="80OOpqS3fgjmTiz0P8j4mwdLzW2vfafw71xbubxojrZTEdMkRIwKh1DRgQzuDeQiQqib43XZlMELBOHEnAdgDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.16</title>
             <pubDate>Sun, 01 Nov 2026 15:48:10 +0900</pubDate>
             <sparkle:version>163</sparkle:version>
@@ -22,13 +59,6 @@
 <li>The window&#x27;s title bar takes the page&#x27;s colour, so scrolled content hides under it cleanly.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.16.dmg" length="3508495" type="application/octet-stream" sparkle:edSignature="UQej5k03kwmSGeJsnSDzDa6PahELQumBBru0sRwJZ81VLx4PsXzUufoKEa4QBAlC94zzHvimguTWP3hFEpyqBg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-159.delta" sparkle:deltaFrom="159" length="335038" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="CL8YiLDW7k/07j9J5eJQCSSvpdyW9UrdnysIR9GyXaymfUJgy0xw083EYWYxEvfBGVq0VJy1WgXdDUCtUNxHAA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-156.delta" sparkle:deltaFrom="156" length="562382" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WKQLfZds5ifYswC4YONn+vifN71U/KrAbospmBoDk/1QNMnumo8I20xpxAJtjNhOz1OB1jEDBEV4rZcmfhugBw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-150.delta" sparkle:deltaFrom="150" length="595898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="edif7nH/ka4jk09EE2ZqZlko8dqnvCPCYn0ve4zITyXwwFOw+Hd7N/Rc6ql3E6Z0HgJbyp4Yyy6ld4L+DS+7Aw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-143.delta" sparkle:deltaFrom="143" length="1045078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="udoKsE6juc7b0u0I4f1g75WyySvYrzZMOhaBfZdfzylshfY+kGV3hkLTTvFkAR3JgB2kU4AgmUo/geKj59VcCA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-136.delta" sparkle:deltaFrom="136" length="1072470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/CxWE+psq+ZCkKgleZ7aIhJr5oqIoYaPbDzUvSGzUav3N87yoDOEZOir5Nl55z15xP5cqT2z099gGRN3YOMRAw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.15</title>
@@ -54,29 +84,6 @@
 <li>If the fan helper stops responding, for example when macOS blocks it after a restart, MacBreeze now reinstalls it on its own, up to five times, instead of waiting for you to click Reinstall.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.15.dmg" length="3482903" type="application/octet-stream" sparkle:edSignature="vlAoRE7tRgNp8FF4lo37vqrMOvB4KmAjpcaQtxRrBGt7SWQb70judQwQtGsjrVEE6QneAw6+Wp9va2Welt3CAg=="/>
-        </item>
-        <item>
-            <title>1.0.14</title>
-            <pubDate>Thu, 15 Oct 2026 19:04:08 +0900</pubDate>
-            <sparkle:version>156</sparkle:version>
-            <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>Auto-Blast no longer goes off on a brief temperature spike. It now waits for 4 seconds of continuous heat before running the fans at full speed. If macOS itself reports a critical temperature, Auto-Blast still starts straight away.</li>
-<li>When Auto-Blast ends, the fans now slow down step by step over a few seconds instead of dropping straight back to normal speed.</li>
-<li>The battery&#x27;s charge and drain time now appears within seconds of plugging in or unplugging. MacBreeze reads the same estimate macOS uses for its own battery icon, instead of waiting many minutes to work it out itself.</li>
-<li>The menu bar item&#x27;s text is now centered, and the Compact size is noticeably smaller.</li>
-<li>Fixed: after you reinstalled the fan helper, the &quot;not on the latest version&quot; warning could stay on screen even though the helper was up to date.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.14.dmg" length="3400888" type="application/octet-stream" sparkle:edSignature="KkTIV5dNQbmEC3ejd2Rbkg+iztunH5809SbGfCK9Gx1Qq6RH74iyuIoIJyfc2QfmPH3/VhGSV2dlp7xBoCgqDA=="/>
         </item>
     </channel>
 </rss>
