@@ -77,6 +77,26 @@
     color: var(--color-accent-hover);
     background: transparent;
   }
+  .nav-links a.is-current {
+    color: var(--color-text);
+  }
+
+  .supported {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-6);
+    text-align: center;
+  }
+  .supported h2 {
+    font-size: var(--font-size-h3);
+    margin: 0 0 var(--space-2);
+  }
+  .supported p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+  }
 
   .compare-hero {
     padding: var(--space-7) var(--space-4) var(--space-5);
@@ -112,6 +132,7 @@
     overflow-x: auto;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
+    padding: var(--space-3);
   }
   table.compare-table {
     width: 100%;
@@ -257,8 +278,9 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html#features">Features</a>
       <a href="pricing.html">Pricing</a>
+      <a href="compare.html" aria-current="page" class="is-current">vs Other Apps</a>
       <a href="index.html#faq">FAQ</a>
-      <a href="index.html#pricing" class="nav-cta">Get MacBreeze</a>
+      <a href="index.html#" class="nav-cta download-link">Download</a>
     </nav>
   </div>
 </header>
@@ -267,8 +289,8 @@
   <section class="compare-hero">
     <div class="compare-hero-inner">
       <h1>MacBreeze vs Macs Fan Control vs TG Pro</h1>
-      <p>All three read your Mac's real temperatures and let you control its fans — the difference is what happens automatically, without you opening the app.</p>
-      <p class="compare-hero-note">Feature and pricing details below were checked directly against each app's own site. Prices and features can change on their end — worth a quick check before buying if it's been a while.</p>
+      <p>All three read your Mac's real temperatures and let you control its fans. The difference is what happens automatically, without you opening the app.</p>
+      <p class="compare-hero-note">Feature and pricing details below were checked directly against each app's own site. Prices and features can change on their end. It's worth a quick check before buying if it's been a while.</p>
     </div>
   </section>
 
@@ -299,51 +321,56 @@
           <tr>
             <td>Free trial of the paid tier</td>
             <td class="is-macbreeze-col">14 days, no card</td>
-            <td class="compare-dash">—</td>
-            <td class="compare-dash">—</td>
+            <td class="compare-dash">×</td>
+            <td class="compare-dash">×</td>
           </tr>
           <tr>
             <td>Fan profiles switch automatically per app</td>
-            <td class="is-macbreeze-col"><span class="compare-check">✓</span> — set once, applies and releases on its own</td>
+            <td class="is-macbreeze-col"><span class="compare-check">✓</span> Set once, applies and releases on its own</td>
             <td>Presets you switch by hand</td>
             <td>Temperature-based rules, not per-app</td>
           </tr>
           <tr>
             <td>Priority order when more than one app matches</td>
             <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
-            <td class="compare-dash">—</td>
-            <td class="compare-dash">—</td>
+            <td class="compare-dash">×</td>
+            <td class="compare-dash">×</td>
           </tr>
           <tr>
             <td>Safety net that can't be switched off, even on free</td>
             <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
-            <td class="compare-dash">—</td>
-            <td class="compare-dash">—</td>
+            <td class="compare-dash">×</td>
+            <td class="compare-dash">×</td>
           </tr>
           <tr>
             <td>Visual sensor curves (drag a temperature-to-speed graph)</td>
             <td class="is-macbreeze-col"><span class="compare-check">✓</span> (Pro)</td>
-            <td class="compare-dash">—</td>
-            <td class="compare-dash">—</td>
+            <td class="compare-dash">×</td>
+            <td class="compare-dash">×</td>
           </tr>
           <tr>
             <td>Native SwiftUI, no Electron</td>
             <td class="is-macbreeze-col"><span class="compare-check">✓</span></td>
-            <td>—</td>
-            <td>—</td>
+            <td>×</td>
+            <td>×</td>
           </tr>
           <tr>
             <td>Full refund window</td>
             <td class="is-macbreeze-col">14 days, no questions asked</td>
-            <td class="compare-dash">—</td>
-            <td class="compare-dash">—</td>
+            <td class="compare-dash">×</td>
+            <td class="compare-dash">×</td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="compare-caveat">
-      Macs Fan Control and TG Pro are both long-running, well-regarded tools — this table is about one specific thing MacBreeze was built around (fans that follow what you're running, on their own) rather than a claim that either is worse overall. Sources: <a href="https://crystalidea.com/macs-fan-control" target="_blank" rel="noopener">crystalidea.com/macs-fan-control</a>, <a href="https://www.tunabellysoftware.com/tgpro/" target="_blank" rel="noopener">tunabellysoftware.com/tgpro</a>.
+      Macs Fan Control and TG Pro are both long-running, well-regarded tools. This table covers one thing MacBreeze was built around: fans that follow whatever you're running, on their own. It doesn't mean either app is worse overall. Sources: <a href="https://crystalidea.com/macs-fan-control" target="_blank" rel="noopener">crystalidea.com/macs-fan-control</a>, <a href="https://www.tunabellysoftware.com/tgpro/" target="_blank" rel="noopener">tunabellysoftware.com/tgpro</a>.
     </p>
+  </section>
+
+  <section class="supported" aria-labelledby="supported-heading">
+    <h2 id="supported-heading">Supported devices</h2>
+    <p>Any Apple Silicon Mac (M1 or later) on macOS 14 Sonoma or later. Fanless MacBook Air and Neo models are detected automatically and get a free monitoring-only view. Intel Macs are not supported.</p>
   </section>
 
   <div class="compare-cta">

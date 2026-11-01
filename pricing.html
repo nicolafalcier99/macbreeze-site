@@ -80,6 +80,27 @@
     color: var(--color-accent-hover);
     background: transparent;
   }
+  .nav-links a.is-current {
+    color: var(--color-text);
+  }
+
+  /* Supported devices — one line of hard facts, placed before the assurance strip */
+  .supported {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-4) var(--space-6);
+    text-align: center;
+  }
+  .supported h2 {
+    font-size: var(--font-size-h3);
+    margin: 0 0 var(--space-2);
+  }
+  .supported p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+  }
 
   /* Header */
   .pricing-hero {
@@ -122,10 +143,11 @@
   }
   .plan-card.is-featured {
     border-color: var(--color-accent);
-    box-shadow: var(--shadow-featured);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
   }
   .plan-card h2 {
-    font-size: var(--font-size-h3);
+    font-size: 1.5rem;
+    line-height: 1.2;
     margin: 0 0 var(--space-1);
   }
   .plan-price {
@@ -141,7 +163,7 @@
     margin-right: var(--space-1);
   }
   .plan-tagline {
-    margin: var(--space-1) 0 var(--space-3);
+    margin: var(--space-1) 0 0;
     color: var(--color-text-secondary);
     font-size: var(--font-size-small);
   }
@@ -156,6 +178,7 @@
     overflow-x: auto;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
+    padding: var(--space-3);
   }
   table.compare-table {
     width: 100%;
@@ -207,6 +230,7 @@
     padding: 0 var(--space-4) var(--space-7);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
     gap: var(--space-3);
   }
   .assurance-item {
@@ -216,7 +240,7 @@
     padding: var(--space-4);
   }
   .assurance-item h3 {
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-h3);
     margin: 0 0 var(--space-1);
   }
   .assurance-item p {
@@ -326,9 +350,10 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html#features">Features</a>
+      <a href="pricing.html" aria-current="page" class="is-current">Pricing</a>
       <a href="compare.html">vs Other Apps</a>
       <a href="index.html#faq">FAQ</a>
-      <a href="index.html#pricing" class="nav-cta">Get MacBreeze</a>
+      <a href="index.html#" class="nav-cta download-link">Download</a>
     </nav>
   </div>
 </header>
@@ -337,7 +362,7 @@
   <section class="pricing-hero">
     <div class="pricing-hero-inner">
       <h1>Simple pricing. Own it once.</h1>
-      <p>No subscription, ever. Monitoring and fan control stay free for everyone — Pro lifts the limits on profiles and per-app automations, and adds visual sensor curves.</p>
+      <p>Monitoring and fan control are free, with no subscription. Pro removes the limits on fan profiles and per-app automations, and adds sensor curves you drag on a graph.</p>
     </div>
   </section>
 
@@ -345,17 +370,17 @@
     <div class="plan-card">
       <h2>Free</h2>
       <p class="plan-price">$0</p>
-      <p class="plan-tagline">Forever, no card required</p>
+      <p class="plan-tagline">Free forever.<br>No card needed.</p>
     </div>
     <div class="plan-card is-featured">
       <h2>Pro</h2>
       <p class="plan-price">$15</p>
-      <p class="plan-tagline">One Mac, forever</p>
+      <p class="plan-tagline">One Mac, forever.</p>
     </div>
     <div class="plan-card">
       <h2>4-Pack</h2>
       <p class="plan-price"><span class="plan-price-original">$60</span>$45</p>
-      <p class="plan-tagline">Up to 4 Macs — 4 for the price of 3</p>
+      <p class="plan-tagline">Up to 4 Macs.<br>Four for the price of three.</p>
     </div>
   </div>
 
@@ -386,20 +411,20 @@
             <td class="compare-check" aria-label="Included">✓</td>
           </tr>
           <tr>
-            <td>Auto-Blast safety net — can't be switched off</td>
+            <td>Auto-Blast safety net, can't be switched off</td>
             <td class="compare-check" aria-label="Included">✓</td>
             <td class="compare-check" aria-label="Included">✓</td>
             <td class="compare-check" aria-label="Included">✓</td>
           </tr>
           <tr>
             <td>Custom Auto-Blast overheat threshold</td>
-            <td class="compare-dash" aria-label="Not included">—</td>
+            <td class="compare-dash" aria-label="Not included">×</td>
             <td class="compare-check" aria-label="Included">✓</td>
             <td class="compare-check" aria-label="Included">✓</td>
           </tr>
           <tr>
-            <td>Visual sensor curves — drag temperature-to-speed graphs</td>
-            <td class="compare-dash" aria-label="Not included">—</td>
+            <td>Sensor curves you drag on a temperature graph</td>
+            <td class="compare-dash" aria-label="Not included">×</td>
             <td class="compare-check" aria-label="Included">✓</td>
             <td class="compare-check" aria-label="Included">✓</td>
           </tr>
@@ -418,20 +443,20 @@
           </tr>
           <tr>
             <td>Priority ordering between automations</td>
-            <td class="compare-dash" aria-label="Not included">—</td>
+            <td class="compare-dash" aria-label="Not included">×</td>
             <td class="compare-check" aria-label="Included">✓</td>
             <td class="compare-check" aria-label="Included">✓</td>
           </tr>
           <tr class="compare-section-row"><td colspan="4">Licence</td></tr>
           <tr>
             <td>Macs covered</td>
-            <td>—</td>
+            <td>×</td>
             <td>1</td>
             <td>Up to 4</td>
           </tr>
           <tr>
             <td>Free trial before paying</td>
-            <td class="compare-dash" aria-label="Not applicable">—</td>
+            <td class="compare-dash" aria-label="Not applicable">×</td>
             <td>14 days</td>
             <td>14 days</td>
           </tr>
@@ -446,18 +471,23 @@
     </div>
   </section>
 
+  <section class="supported" aria-labelledby="supported-heading">
+    <h2 id="supported-heading">Supported devices</h2>
+    <p>Any Apple Silicon Mac (M1 or later) on macOS 14 Sonoma or later. Fanless MacBook Air and Neo models are detected automatically and get a free monitoring-only view. Intel Macs are not supported.</p>
+  </section>
+
   <section class="assurance" aria-label="Trial, refund, and update policy">
     <div class="assurance-item">
       <h3>14-day free trial</h3>
-      <p>Every install starts on a full trial of Pro — no card, no signup. See it work on your own Mac before paying anything.</p>
+      <p>Every install starts with 14 days of Pro. No card, no signup. Try it on your own Mac before you pay for anything.</p>
     </div>
     <div class="assurance-item">
       <h3>Full refund within 14 days</h3>
-      <p>Email us within 14 days of buying and we'll refund you in full, no questions asked. (Linking a licence for offline use is the one exception — see the <a href="index.html#faq">FAQ</a> for details.)</p>
+      <p>Email us within 14 days of buying and we'll refund you in full, no questions asked. The one exception is linking a licence for offline use. The <a href="index.html#faq">FAQ</a> explains how that works.</p>
     </div>
     <div class="assurance-item">
       <h3>Signed and notarized by Apple</h3>
-      <p>Every release is signed with a Developer ID and notarized by Apple before it ships — the same process macOS itself checks on first launch. See what's changed in <a href="https://github.com/nicolafalcier99/macbreeze-site/releases" target="_blank" rel="noopener">every release</a>.</p>
+      <p>Every release is signed with a Developer ID and notarized by Apple before it ships. It's the same check macOS runs on first launch. See what's changed in <a href="https://github.com/nicolafalcier99/macbreeze-site/releases" target="_blank" rel="noopener">every release</a>.</p>
     </div>
   </section>
 
