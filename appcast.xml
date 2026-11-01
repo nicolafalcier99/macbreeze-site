@@ -3,8 +3,47 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.19</title>
+            <pubDate>Sun, 01 Nov 2026 22:40:35 +0900</pubDate>
+            <sparkle:criticalUpdate sparkle:version="182"/>
+            <sparkle:version>182</sparkle:version>
+            <sparkle:shortVersionString>1.0.19</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>⚠️ Important: update as soon as possible</h3>
+<ul>
+<li>Please install this update now. It fixes problems with the fan helper and with Blast that can leave fan control not working. Earlier versions can be asked to update to this one as a required install.</li>
+</ul>
+<h3>New</h3>
+<ul>
+<li>If the fan helper is left behind by an update, MacBreeze now replaces it automatically when restarting it is not enough.</li>
+<li>Settings → Fan Control always has Reinstall Fan Helper, even when nothing is wrong.</li>
+<li>Blast works while a safety trip holds the fans. Before, pressing Blast did nothing until the trip ended.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Install and Relaunch now quits MacBreeze and installs the update.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.19.dmg" length="3512578" type="application/octet-stream" sparkle:edSignature="p7pZh1Za4OujmsVBdTnMXy3QMTkYlyC2vLy4eVwjjE8hWlEIZGL5cDdOotLxFeRRJvDZeoEUDD976eRfUh58BQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze182-175.delta" sparkle:deltaFrom="175" length="256530" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="r7AnxWjxgeNRpGOc7ACeF0A67ddNT+e1l9aCZNyLX9hk3I01aT5ozVAjUH+AawJ0uZC/q7CCw5mpnsqvzBzXDQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze182-173.delta" sparkle:deltaFrom="173" length="255542" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="q3J7Rdjnp2r/q1gt+tbW50lSIuDf4/v8MhnuL4pCQPQNTX5LS4EkDne+O33x6FvaOMieI7a8+FdQVYPtlysWAw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze182-163.delta" sparkle:deltaFrom="163" length="282822" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DTbxwTzQZzTLxbI8v+3FYczxYsUk2TuP3S6CkK6dSmVVlq0iEKit7vMX1ckYLSUhGfGkCgml/oNE/l9MpjNCBQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze182-159.delta" sparkle:deltaFrom="159" length="386826" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+oh6ku2N0a+aQmfm69JzpApZEmK7EgZgrh+A5e18wGdCTPiMzMeXfAZDJ5ygZPqoAe6M8hpsj9xzmKUsyBb2Cw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze182-156.delta" sparkle:deltaFrom="156" length="589178" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8I3GeyKU0H0VGTej3XsTrsPYKoM7Mss5Si4bCy+vlncmLV+Li/gm0n+XFItccvGZH5mUrwx+pePTWfTCMf56CQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.18</title>
             <pubDate>Sun, 01 Nov 2026 21:38:59 +0900</pubDate>
+            <sparkle:criticalUpdate sparkle:version="182"/>
             <sparkle:version>175</sparkle:version>
             <sparkle:shortVersionString>1.0.18</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
@@ -21,17 +60,11 @@
 <li>Install and Relaunch now quits MacBreeze and installs the update. Before, the app could stay open and the update would not install.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.18.dmg" length="3506055" type="application/octet-stream" sparkle:edSignature="I/bvikQYazg7ff1fVQSEUXq9z0f4cWXr6qDGqiy/F1kvxoCv1kVjg4jwJzS9Ggn56l5j9ubCjleByn4RWlXPBw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-173.delta" sparkle:deltaFrom="173" length="153626" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9z7JpleA7O2auj8HDOzQo0f+M+ztWcGLdh1gxW267Al9XFVwolqMPTukIK3iQ3gcx8p1B8Z1tGSy+rhwXfoOAg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-163.delta" sparkle:deltaFrom="163" length="222834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dKumRQsj5DZEN4pHL4ADz0Msvn9nBXhYXS3c28MQlmKBqTX/VjSjvflw+me6OOThyPMmu03z0CCHeP5+kn3WDg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-159.delta" sparkle:deltaFrom="159" length="346058" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Y3ruKp9LBvWYARatfOvjE0CQfTUYf0y2DlZegA1+8knEdutEDYvn64H2H3E921sul35FEb7jBGZwdqjWcM+pDw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-156.delta" sparkle:deltaFrom="156" length="567166" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6oZNww1IT/ZkejsH1EwP0qXFApenqI+lesFeQ+BuYfy/KZu/iJhg7GN5qdGHDy6rbqENBs43+aG9xj3SVATYCQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-150.delta" sparkle:deltaFrom="150" length="600022" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ug/M4yvdlEnVdQbXYe2/112jE0+xWj3+fgD/kqamrm0mh0o5EQI+3fkM2BaKLhlsVFeuNobqgxb/lRW3VVgyAA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.17</title>
             <pubDate>Sun, 01 Nov 2026 17:01:29 +0900</pubDate>
+            <sparkle:criticalUpdate sparkle:version="182"/>
             <sparkle:version>173</sparkle:version>
             <sparkle:shortVersionString>1.0.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
@@ -58,27 +91,6 @@
 <li>The What&#x27;s New panel had no notes to show for 1.0.16. Notes are now bundled with each release.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.17.dmg" length="3507816" type="application/octet-stream" sparkle:edSignature="WnTr8aLFwbnpjbm+Y2LZKxO1jga27+8GrMCQuGVnyhcY8yJenhyRKsc9ZVNlmEngRFTw/6TsDipvGrDdg9rwAw=="/>
-        </item>
-        <item>
-            <title>1.0.16</title>
-            <pubDate>Sun, 01 Nov 2026 15:48:10 +0900</pubDate>
-            <sparkle:version>163</sparkle:version>
-            <sparkle:shortVersionString>1.0.16</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>Fans speed up quickly when the temperature rises, but slow down more gently afterwards. In Sensor mode, and after an Auto-Blast trip, they now take around twice as long to come back down, so they no longer drop straight to a lower speed the moment a spike passes.</li>
-<li>The CPU and GPU graphs turn from blue to amber and then red as the temperature climbs, and show the highest and average temperature for the last five minutes. Normal temperatures are blue everywhere, to match the graphs.</li>
-<li>The window&#x27;s title bar takes the page&#x27;s colour, so scrolled content hides under it cleanly.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.16.dmg" length="3508495" type="application/octet-stream" sparkle:edSignature="UQej5k03kwmSGeJsnSDzDa6PahELQumBBru0sRwJZ81VLx4PsXzUufoKEa4QBAlC94zzHvimguTWP3hFEpyqBg=="/>
         </item>
     </channel>
 </rss>
