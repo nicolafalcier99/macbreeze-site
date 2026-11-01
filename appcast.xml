@@ -3,6 +3,34 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.16</title>
+            <pubDate>Sun, 01 Nov 2026 15:48:10 +0900</pubDate>
+            <sparkle:version>163</sparkle:version>
+            <sparkle:shortVersionString>1.0.16</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<ul>
+<li>Fans speed up quickly when the temperature rises, but slow down more gently afterwards. In Sensor mode, and after an Auto-Blast trip, they now take around twice as long to come back down, so they no longer drop straight to a lower speed the moment a spike passes.</li>
+<li>The CPU and GPU graphs turn from blue to amber and then red as the temperature climbs, and show the highest and average temperature for the last five minutes. Normal temperatures are blue everywhere, to match the graphs.</li>
+<li>The window&#x27;s title bar takes the page&#x27;s colour, so scrolled content hides under it cleanly.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.16.dmg" length="3508495" type="application/octet-stream" sparkle:edSignature="UQej5k03kwmSGeJsnSDzDa6PahELQumBBru0sRwJZ81VLx4PsXzUufoKEa4QBAlC94zzHvimguTWP3hFEpyqBg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-159.delta" sparkle:deltaFrom="159" length="335038" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="CL8YiLDW7k/07j9J5eJQCSSvpdyW9UrdnysIR9GyXaymfUJgy0xw083EYWYxEvfBGVq0VJy1WgXdDUCtUNxHAA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-156.delta" sparkle:deltaFrom="156" length="562382" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WKQLfZds5ifYswC4YONn+vifN71U/KrAbospmBoDk/1QNMnumo8I20xpxAJtjNhOz1OB1jEDBEV4rZcmfhugBw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-150.delta" sparkle:deltaFrom="150" length="595898" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="edif7nH/ka4jk09EE2ZqZlko8dqnvCPCYn0ve4zITyXwwFOw+Hd7N/Rc6ql3E6Z0HgJbyp4Yyy6ld4L+DS+7Aw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-143.delta" sparkle:deltaFrom="143" length="1045078" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="udoKsE6juc7b0u0I4f1g75WyySvYrzZMOhaBfZdfzylshfY+kGV3hkLTTvFkAR3JgB2kU4AgmUo/geKj59VcCA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze163-136.delta" sparkle:deltaFrom="136" length="1072470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="/CxWE+psq+ZCkKgleZ7aIhJr5oqIoYaPbDzUvSGzUav3N87yoDOEZOir5Nl55z15xP5cqT2z099gGRN3YOMRAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.15</title>
             <pubDate>Thu, 22 Oct 2026 00:29:18 +0900</pubDate>
             <sparkle:version>159</sparkle:version>
@@ -26,13 +54,6 @@
 <li>If the fan helper stops responding, for example when macOS blocks it after a restart, MacBreeze now reinstalls it on its own, up to five times, instead of waiting for you to click Reinstall.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.15.dmg" length="3482903" type="application/octet-stream" sparkle:edSignature="vlAoRE7tRgNp8FF4lo37vqrMOvB4KmAjpcaQtxRrBGt7SWQb70judQwQtGsjrVEE6QneAw6+Wp9va2Welt3CAg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-156.delta" sparkle:deltaFrom="156" length="505094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W6VuhAUEXUdjIdG3sKm2K+JWP+uIZvbEpjJdbS66fHSpw0A6UHAHEY3sJrjkNkSwmYMFYlGeHobSbc3Bb4KQDA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-150.delta" sparkle:deltaFrom="150" length="547746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="DNo92FeYOsAKJRF3dxfgO0op3hPNMePc6Vmyi7jvQ8ESOvv49zNNa6IduiLpfTjgf1dl0iKiNEx5uRN/OOA+Dg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-143.delta" sparkle:deltaFrom="143" length="1018962" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6xGngk2jecnH+50tMTcDiHKz0ffjaSWyJozVD1rbKJeFL1YjvxfTDS+43RmTkOOTb9Zgwb3IbJeRnBIpeObUAQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-136.delta" sparkle:deltaFrom="136" length="1050470" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="pyUh3FfH6YXctKPMJ01h/hOygmd9RJsHeHGVauFyRG5ncqflWrElyCaCY0A4BqgECxXPC5bmU6yhZGxr1I/HDw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze159-123.delta" sparkle:deltaFrom="123" length="1072454" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="79/3w4pc4O2y9FUbNF5FvsocDoxSRqAXbapnd81Ed9Ok64Ftiy0DIuSvfyfcvKxUeyTQMSO0HEun8sfoze0MBA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.14</title>
@@ -56,29 +77,6 @@
 <li>Fixed: after you reinstalled the fan helper, the &quot;not on the latest version&quot; warning could stay on screen even though the helper was up to date.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.14.dmg" length="3400888" type="application/octet-stream" sparkle:edSignature="KkTIV5dNQbmEC3ejd2Rbkg+iztunH5809SbGfCK9Gx1Qq6RH74iyuIoIJyfc2QfmPH3/VhGSV2dlp7xBoCgqDA=="/>
-        </item>
-        <item>
-            <title>1.0.13</title>
-            <pubDate>Fri, 25 Sep 2026 12:06:19 +0900</pubDate>
-            <sparkle:version>150</sparkle:version>
-            <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>Fixed: battery temperature was missing on some Macs. MacBreeze was reading it from the wrong place in macOS and found nothing; it now reads it from where the battery actually reports it.</li>
-<li>Fixed: after an update, the fan helper could keep running its older code until you restarted your Mac. MacBreeze now notices when the helper is behind and restarts it, so fixes to it take effect straight away.</li>
-<li>The menu bar no longer shifts sideways while MacBreeze works out your battery&#x27;s charge or drain rate. The long &quot;Calculating…&quot; is now a small hourglass that takes the same space as the reading, so the icons next to MacBreeze stay put.</li>
-<li>Right after you plug in the charger, MacBreeze shows the hourglass instead of the plug. macOS can take half a minute or more to start charging, and the plug made it look as if the Mac wouldn&#x27;t charge.</li>
-<li>Fixed: the battery hourglass could stay up forever at ordinary drain rates and never settle on a reading.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.13.dmg" length="3391317" type="application/octet-stream" sparkle:edSignature="n2591NBbkh150bF01lYID9cC3xuLa97w17LZBqpMsJw8LhTew+aZ9nxGDDRngTtyxlBSR3TSRHH3DwKKACUgAQ=="/>
         </item>
     </channel>
 </rss>
