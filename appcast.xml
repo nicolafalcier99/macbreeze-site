@@ -3,6 +3,33 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.18</title>
+            <pubDate>Sun, 01 Nov 2026 21:38:59 +0900</pubDate>
+            <sparkle:version>175</sparkle:version>
+            <sparkle:shortVersionString>1.0.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Fixed</h3>
+<ul>
+<li>Install and Relaunch now quits MacBreeze and installs the update. Before, the app could stay open and the update would not install.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.18.dmg" length="3506055" type="application/octet-stream" sparkle:edSignature="I/bvikQYazg7ff1fVQSEUXq9z0f4cWXr6qDGqiy/F1kvxoCv1kVjg4jwJzS9Ggn56l5j9ubCjleByn4RWlXPBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-173.delta" sparkle:deltaFrom="173" length="153626" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9z7JpleA7O2auj8HDOzQo0f+M+ztWcGLdh1gxW267Al9XFVwolqMPTukIK3iQ3gcx8p1B8Z1tGSy+rhwXfoOAg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-163.delta" sparkle:deltaFrom="163" length="222834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dKumRQsj5DZEN4pHL4ADz0Msvn9nBXhYXS3c28MQlmKBqTX/VjSjvflw+me6OOThyPMmu03z0CCHeP5+kn3WDg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-159.delta" sparkle:deltaFrom="159" length="346058" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Y3ruKp9LBvWYARatfOvjE0CQfTUYf0y2DlZegA1+8knEdutEDYvn64H2H3E921sul35FEb7jBGZwdqjWcM+pDw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-156.delta" sparkle:deltaFrom="156" length="567166" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6oZNww1IT/ZkejsH1EwP0qXFApenqI+lesFeQ+BuYfy/KZu/iJhg7GN5qdGHDy6rbqENBs43+aG9xj3SVATYCQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze175-150.delta" sparkle:deltaFrom="150" length="600022" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ug/M4yvdlEnVdQbXYe2/112jE0+xWj3+fgD/kqamrm0mh0o5EQI+3fkM2BaKLhlsVFeuNobqgxb/lRW3VVgyAA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.17</title>
             <pubDate>Sun, 01 Nov 2026 17:01:29 +0900</pubDate>
             <sparkle:version>173</sparkle:version>
@@ -31,13 +58,6 @@
 <li>The What&#x27;s New panel had no notes to show for 1.0.16. Notes are now bundled with each release.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.17.dmg" length="3507816" type="application/octet-stream" sparkle:edSignature="WnTr8aLFwbnpjbm+Y2LZKxO1jga27+8GrMCQuGVnyhcY8yJenhyRKsc9ZVNlmEngRFTw/6TsDipvGrDdg9rwAw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-163.delta" sparkle:deltaFrom="163" length="197194" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8QKvNl0X7L94p0wtAdIVPQSkrxos4ybcya+mk+wOWVweaqkoOE1ELFP2y9ja2TINb1KY/gteSOu4tPRWDh7JDg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-159.delta" sparkle:deltaFrom="159" length="345266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="F8zKIqW9HnAuPoVCpvRwmrPE8vUKpW2xePtO6arnksujy1SAUdSw7QKK+WwYDNsNuA5f7QixHXEEC0hn6ZWEAg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-156.delta" sparkle:deltaFrom="156" length="566378" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6l6/xrvZQNg+YFbOYma9jeIQ+QoZxnZ9Z9XF7luOkuB2nSDS6WjEnU9GdTLMZy/qX7kST/NPH7TOuY3kmwxWAw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-150.delta" sparkle:deltaFrom="150" length="599266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="cTkMG+njn9MWdQ7VlGMO0JXLNYjlFmpmxc/ULtnVVcWiqg7VlYRHA5PNnQftLfTJekghgRxocj1QeC88RqCeDA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze173-143.delta" sparkle:deltaFrom="143" length="1047922" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="80OOpqS3fgjmTiz0P8j4mwdLzW2vfafw71xbubxojrZTEdMkRIwKh1DRgQzuDeQiQqib43XZlMELBOHEnAdgDA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.16</title>
@@ -59,31 +79,6 @@
 <li>The window&#x27;s title bar takes the page&#x27;s colour, so scrolled content hides under it cleanly.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.16.dmg" length="3508495" type="application/octet-stream" sparkle:edSignature="UQej5k03kwmSGeJsnSDzDa6PahELQumBBru0sRwJZ81VLx4PsXzUufoKEa4QBAlC94zzHvimguTWP3hFEpyqBg=="/>
-        </item>
-        <item>
-            <title>1.0.15</title>
-            <pubDate>Thu, 22 Oct 2026 00:29:18 +0900</pubDate>
-            <sparkle:version>159</sparkle:version>
-            <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<ul>
-<li>A new look. The window&#x27;s backgrounds now match each other in light and dark mode, the MacBreeze name sits centred at the top, and one MacBreeze blue is used throughout. Warm and hot colours are easier to read in light mode.</li>
-<li>The Overview shows CPU and GPU in cards of their own: the temperature, a word for how hot it is (Normal, Warm or Hot), and a graph of the last five minutes. Battery, Wi-Fi, power draw and battery drain sit in a row underneath.</li>
-<li>Temperatures for each CPU core are now an option in Preferences, off by default. While it is off, MacBreeze doesn&#x27;t read them at all.</li>
-<li>The menu bar panel shows CPU and GPU first and larger, with the same words, and the speed of each fan.</li>
-<li>Profiles and App Automations now say what each one sets, with a small picture of its fan curve. When two automated apps are open at once, you choose plainly which one wins: the app in front, or the one higher in the list.</li>
-<li>The fan curve editor is cleaner: temperatures in even 10° steps, a dot showing where your fans are right now, and no legend to read.</li>
-<li>If the fan helper stops responding, for example when macOS blocks it after a restart, MacBreeze now reinstalls it on its own, up to five times, instead of waiting for you to click Reinstall.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.15.dmg" length="3482903" type="application/octet-stream" sparkle:edSignature="vlAoRE7tRgNp8FF4lo37vqrMOvB4KmAjpcaQtxRrBGt7SWQb70judQwQtGsjrVEE6QneAw6+Wp9va2Welt3CAg=="/>
         </item>
     </channel>
 </rss>
