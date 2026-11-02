@@ -1,0 +1,21 @@
+<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>⚠️ Important: update as soon as possible</h3>
+<ul>
+<li>Fans stay at full speed for the whole of a temperature safety trip. The fix in 1.0.21 missed a case: if the fan helper restarted while the Mac was already hot, a fan could drop back to automatic and stay there.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Blast stays on until you turn it off. Before, the fans could slow down after a safety trip while the button still showed Blast Engaged.</li>
+<li>A fan curve can no longer overwrite Blast on one fan just after you press it.</li>
+<li>Fans in Sensor mode come back down when you turn Blast off. Before, they could stay at full speed until the temperature changed.</li>
+<li>MacBreeze no longer hides the update window when it hides its own window.</li>
+<li>Install and Relaunch works with Settings or another panel open. This takes effect from the update after this one.</li>
+<li>MacBreeze no longer hides its window when an update starts downloading in the background.</li>
+</ul>
