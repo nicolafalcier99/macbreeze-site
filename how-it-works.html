@@ -303,14 +303,14 @@
 
       <h2>Three safety nets</h2>
       <p>Setting fan speeds by hand has an obvious failure mode: fans left too slow under load. Three protections
-      answer it. Two live inside the helper, so they survive MacBreeze itself failing.</p>
+      answer it. Quit MacBreeze and it leaves your fans alone: they go back to macOS.</p>
       <ul>
-        <li><strong>Auto-Blast.</strong> Past a temperature you choose, the helper drives every fan to full speed on
-        its own, overriding whatever you set. That temperature can move between 70&nbsp;&deg;C and 95&nbsp;&deg;C, and
+        <li><strong>Auto-Blast.</strong> While MacBreeze is open, past a temperature you choose, the helper drives every
+        fan to full speed, overriding whatever you set. That temperature can move between 70&nbsp;&deg;C and 95&nbsp;&deg;C, and
         no further in either direction.</li>
-        <li><strong>The 45-second heartbeat.</strong> MacBreeze continually tells the helper it is alive. If that stops
-        &mdash; quit, crash, or hang &mdash; the helper hands your fans back to macOS after 45 seconds. A crashed app
-        cannot leave your fans stuck.</li>
+        <li><strong>The hand-back.</strong> If MacBreeze quits or crashes, the helper hands your fans back to macOS within
+        a few seconds. If it hangs, a heartbeat catches that within 45 seconds. A crashed app cannot leave your
+        fans stuck.</li>
         <li><strong>Your Mac&rsquo;s firmware.</strong> Apple&rsquo;s own thermal protection sits underneath all of
         this, unmodified and not bypassed. If your Mac decides it must throttle or shut down to save itself, it still
         does.</li>
