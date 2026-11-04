@@ -82,6 +82,7 @@
   }
 
   /* Legal content */
+  .legal p a { text-decoration: underline; text-underline-offset: 2px; }
   .legal {
     padding: var(--space-7) var(--space-4);
   }
@@ -265,7 +266,7 @@
       <h2>What it reads</h2>
       <p>Sensors your Mac already exposes:</p>
       <ul>
-        <li>Temperatures &mdash; processor, graphics, battery</li>
+        <li>Temperatures: processor, graphics, battery</li>
         <li>Fan speeds in RPM, and each fan&rsquo;s true minimum and maximum</li>
         <li>Whether you are on battery or mains, and the charging wattage</li>
       </ul>
@@ -284,7 +285,7 @@
       <h2>The fan helper</h2>
       <p>Reaching the System Management Controller needs privileges an ordinary application does not get. That is also
       why MacBreeze is not on the Mac App Store: the App Store sandbox forbids precisely this.</p>
-      <p>So MacBreeze ships a second, very small program &mdash; the fan helper &mdash; inside its own app bundle,
+      <p>So MacBreeze ships a second, very small program, the fan helper, inside its own app bundle,
       installed through macOS&rsquo;s approval mechanism. It asks you. It cannot install itself quietly.</p>
       <p>The helper understands six instructions:</p>
       <ul>
@@ -298,7 +299,7 @@
       <p>None of them runs a command, opens a file, or makes a network connection, because no such instruction exists
       in it. The helper never touches the internet.</p>
       <p>It also refuses to speak to anything but MacBreeze. Before accepting a connection it checks the caller&rsquo;s
-      code signature &mdash; signed by Apple, carrying MacBreeze&rsquo;s identifier, under our developer team. It does
+      code signature: signed by Apple, carrying MacBreeze&rsquo;s identifier, under our developer team. It does
       not simply trust a process claiming to be us.</p>
 
       <h2>Three safety nets</h2>
@@ -319,20 +320,21 @@
       <h2>What leaves your Mac</h2>
       <p>MacBreeze contacts two addresses, both ours:</p>
       <ul>
-        <li><strong>license.macbreeze.app</strong> &mdash; starting your trial, checking your licence, managing which
+        <li><strong>license.macbreeze.app</strong>: starting your trial, checking your licence, managing which
         Macs it covers</li>
-        <li><strong>macbreeze.app</strong> &mdash; asking whether a newer version exists, and downloading it if you
+        <li><strong>macbreeze.app</strong>: asking whether a newer version exists, and downloading it if you
         agree</li>
       </ul>
-      <p>A licence check &mdash; when MacBreeze starts, and once a day while it runs &mdash; sends three things: your licence key, a hashed device identifier, and a short label such as
+      <p>A licence check (when MacBreeze starts, and once a day while it runs) sends three things: your licence key, a hashed device identifier, and a short label such as
       &ldquo;MacBook Pro &middot; M4 Pro&rdquo;. That label is deliberately not your computer&rsquo;s name, which
       usually contains someone&rsquo;s real name.</p>
       <p>The identifier is your Mac&rsquo;s hardware UUID, hashed on your Mac before it is sent. The original never
       leaves the machine, so nothing we store can be turned back into it.</p>
+      <p>Cloudflare runs that server. It works out your country from your connection, and a Mac starting MacBreeze for the first time adds one to that country&rsquo;s total. The total has no date and isn&rsquo;t linked to your Mac. Your IP address is used to limit abuse and isn&rsquo;t written to our records. The <a href="privacy.html">privacy policy</a> has the details.</p>
       <div class="legal-note">
         <p>No analytics SDK. No crash reporting. No advertising identifier.</p>
         <p>The one thing we learn about use is that your Mac checked in on a given day, and whether it&rsquo;s on a
-        trial, free, or paid. We count those as totals &mdash; how many Macs this week &mdash; and keep only the latest
+        trial, free, or paid. We count those as totals (how many Macs this week) and keep only the latest
         date. We can&rsquo;t see your temperatures, fan settings, profiles, or which features you use.</p>
       </div>
 
