@@ -3,6 +3,40 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.28</title>
+            <pubDate>Wed, 18 Nov 2026 21:24:21 +0900</pubDate>
+            <sparkle:version>207</sparkle:version>
+            <sparkle:shortVersionString>1.0.28</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>New</h3>
+<p>On macOS 27, the menu bar item can be used in one movement, the way a menu is: press, slide, let go.</p>
+<ul>
+<li>Press the menu bar item, keep the button down, slide to Blast, Open Dashboard or Quit, and let go. The button under the pointer is ringed in blue, and it fires when you let go.</li>
+<li>To change profile the same way, rest on the profile picker for a moment. Your profiles appear under it: slide to one and let go.</li>
+<li>Or press and hold still on the menu bar item for half a second. A short list takes the panel&#x27;s place: Blast, your profiles, Open Dashboard and Quit.</li>
+</ul>
+<h3>Improved</h3>
+<ul>
+<li>Right click on the menu bar item now lists your profiles too.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.28.dmg" length="3757213" type="application/octet-stream" sparkle:edSignature="XsovYGBMoBZq6S0fGSIO3cwA3a6AGFPYVxKF/TulxuqGGNTv7OozXsuu9RVgnpgFSWsSTJ2bN1gkF4qJc5FxAg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-205.delta" sparkle:deltaFrom="205" length="399434" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aWBNYsSOHDw134jUy2/Pf1+5Mj4jyQ2+rxLiaZamV5Ae2SOGgg68EiwbCdE4BVF00UmLdsEBL5Tmnu9I26gIBQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-202.delta" sparkle:deltaFrom="202" length="459074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UPBKel6X0nEmNLOsAoih1vXs2Y/KfeMdVibQsZ+9OTUpFipKn1qvUDD845QNuxrAy0y+zRN31egraCTyNv2SDQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-200.delta" sparkle:deltaFrom="200" length="543158" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="r1/RuhcwCS6gZlPukrDmzoY/d7T5A+Riu8Ks9ujmBjbYmAgZMpJHvytuiwcgSdIylmUg4crOVLDc3/tXnBKMAw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-197.delta" sparkle:deltaFrom="197" length="580370" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ESYw9ENccsVvK50Fb8Im7XG68vmabyC0w4n+mXzXjfNTEANzfZRG9EIWwR2wZKQYIA5/JcNTXN7HgMu17EwgAQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-194.delta" sparkle:deltaFrom="194" length="656074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vdWNCHMIQ+s3H4Bb5wCpdM+/VPJb1hJq1Er4tHg/8QbpFGPiCWGKwhJ61lMohWEFszK/rsY5A0TknH8jEQMtDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.27</title>
             <pubDate>Wed, 18 Nov 2026 19:05:08 +0900</pubDate>
             <sparkle:version>205</sparkle:version>
@@ -27,13 +61,6 @@
 <li>After an Auto-Blast safety trip, fans on a curve or a Manual speed ease down to that speed and stay there. Before, they eased all the way down to their minimum and were handed back to macOS, so for about half a minute they could run far below your curve. Under a steady heavy load that let the Mac heat up again and trip Auto-Blast again, over and over.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.27.dmg" length="3674786" type="application/octet-stream" sparkle:edSignature="ZY3Se5DNdY1m0f7WLEEE+gNsQUwcu1nbCnxPVc8vQbfyKdn7qsFK8Wh/xTO7K8DaPWk88ZAhp/cp9OXny404Cg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-202.delta" sparkle:deltaFrom="202" length="312890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Sm69LfunhRIo3OaOLR2wSVzU98cGdcfzxrQsBWkGbFteUP1P8kfS6720SanVO3gVHtFb2VXpH0z7vusd+M16Bg=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-200.delta" sparkle:deltaFrom="200" length="411258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UK81QfJrxZ/j/EWrcz2dQ/wrl0/v77uxgtv5BL7+/JsNZyWLEP5flz3l39QVTWV6UTk4CBbDaFWUyNmtJGj9DA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-197.delta" sparkle:deltaFrom="197" length="464126" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hx01SroJ8UPopPU5ytz610ynYPnFJaX4PoANmqjCMzc1lb4qQdG7mnjQyR5QhynFgvf+qxKIkf/2csih0R13BQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-194.delta" sparkle:deltaFrom="194" length="545674" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="01OFQVHmcZZRT656DcYWZYhtNWYt09nmfOBmRzq4bAqyWw4T9nGrK/TQJURAycmLMb8ZEPo2O9EWVq48vApPAQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-189.delta" sparkle:deltaFrom="189" length="569254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="out0N3pa7QgHXwEBOgUsmRoJ9CPEjhL0kFBMd1Rf9Y74U6zI+qfeLB68u7Yr8VPF5mQn/0Zri0jJhNpYPfElAQ=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.26</title>
@@ -55,30 +82,6 @@
 <li>If you change the profile that comes back when the automation&#x27;s app quits, it comes back with your new settings.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.26.dmg" length="3652400" type="application/octet-stream" sparkle:edSignature="6/XXSlkOQCM74+4e120IIO9s379VaaCmDJ+kVNdvOWwyi16gWrvp80CeIz0R/vlSSKUSd5xwRI3cros6am+OAw=="/>
-        </item>
-        <item>
-            <title>1.0.25</title>
-            <pubDate>Sun, 08 Nov 2026 14:13:03 +0900</pubDate>
-            <sparkle:version>200</sparkle:version>
-            <sparkle:shortVersionString>1.0.25</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<h3>New</h3>
-<ul>
-<li>Profiles can be changed. Press a profile&#x27;s pencil on the Profiles page: its settings go on the fans, and you change modes, speeds, curves and the fan link with the same controls as Overview. Save keeps the changes. Cancel puts back what was running before.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>Switching profiles no longer unlinks your fans, and an open fan curve no longer disappears when you switch.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.25.dmg" length="3605152" type="application/octet-stream" sparkle:edSignature="pAIO0/WX8JRy3E9D92OxBogoccAPW1LopAIVMWqi4p/fjLgWT0fb+FnazkxhnMYFQSP5px98ZdP/FoJhra4RAA=="/>
         </item>
     </channel>
 </rss>
