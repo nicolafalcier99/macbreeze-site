@@ -3,6 +3,39 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.27</title>
+            <pubDate>Wed, 18 Nov 2026 19:05:08 +0900</pubDate>
+            <sparkle:version>205</sparkle:version>
+            <sparkle:shortVersionString>1.0.27</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Improved</h3>
+<ul>
+<li>The menu bar panel now sits flat under the menu bar, like the Mac&#x27;s own Wi-Fi and Battery panels: no arrow, and the system&#x27;s see-through background in place of the solid one.</li>
+<li>Press Esc to close the panel. It also closes when you switch desktop.</li>
+<li>Opening the panel no longer takes you away from the app you are working in.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>After an Auto-Blast safety trip, fans on a curve or a Manual speed ease down to that speed and stay there. Before, they eased all the way down to their minimum and were handed back to macOS, so for about half a minute they could run far below your curve. Under a steady heavy load that let the Mac heat up again and trip Auto-Blast again, over and over.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.27.dmg" length="3674786" type="application/octet-stream" sparkle:edSignature="ZY3Se5DNdY1m0f7WLEEE+gNsQUwcu1nbCnxPVc8vQbfyKdn7qsFK8Wh/xTO7K8DaPWk88ZAhp/cp9OXny404Cg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-202.delta" sparkle:deltaFrom="202" length="312890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Sm69LfunhRIo3OaOLR2wSVzU98cGdcfzxrQsBWkGbFteUP1P8kfS6720SanVO3gVHtFb2VXpH0z7vusd+M16Bg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-200.delta" sparkle:deltaFrom="200" length="411258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UK81QfJrxZ/j/EWrcz2dQ/wrl0/v77uxgtv5BL7+/JsNZyWLEP5flz3l39QVTWV6UTk4CBbDaFWUyNmtJGj9DA=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-197.delta" sparkle:deltaFrom="197" length="464126" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hx01SroJ8UPopPU5ytz610ynYPnFJaX4PoANmqjCMzc1lb4qQdG7mnjQyR5QhynFgvf+qxKIkf/2csih0R13BQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-194.delta" sparkle:deltaFrom="194" length="545674" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="01OFQVHmcZZRT656DcYWZYhtNWYt09nmfOBmRzq4bAqyWw4T9nGrK/TQJURAycmLMb8ZEPo2O9EWVq48vApPAQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze205-189.delta" sparkle:deltaFrom="189" length="569254" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="out0N3pa7QgHXwEBOgUsmRoJ9CPEjhL0kFBMd1Rf9Y74U6zI+qfeLB68u7Yr8VPF5mQn/0Zri0jJhNpYPfElAQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.26</title>
             <pubDate>Sun, 08 Nov 2026 14:40:01 +0900</pubDate>
             <sparkle:version>202</sparkle:version>
@@ -22,13 +55,6 @@
 <li>If you change the profile that comes back when the automation&#x27;s app quits, it comes back with your new settings.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.26.dmg" length="3652400" type="application/octet-stream" sparkle:edSignature="6/XXSlkOQCM74+4e120IIO9s379VaaCmDJ+kVNdvOWwyi16gWrvp80CeIz0R/vlSSKUSd5xwRI3cros6am+OAw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze202-200.delta" sparkle:deltaFrom="200" length="324958" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="dHLJP+7bub5G+7ZZLbWrURfC8XanXrJscUtb1kRj7zWy65c4mt3YE1WLhoHuhYNrT4hV+J81QJOGJSRbCHWaCw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze202-197.delta" sparkle:deltaFrom="197" length="386722" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YPQl/R4tbJq95QVmnPCSAv9AshWrxAfYz4TtG2MRBusvi+Wc/SPiSm5noXHfGoXHe4HKeO2lYqss0dS+GH+CDA=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze202-194.delta" sparkle:deltaFrom="194" length="506394" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SyFMIp8puDRRRCS2syBUkR/UCWguqZwtiBzxIBpysHb6aK2xisW3j5Cb7hMHQQhWBvRfZAx1ZJ26RXooDE6PBw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze202-189.delta" sparkle:deltaFrom="189" length="530662" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HTChCeu4iZ3eX23L8pkqlW15wIa91QXiKqLkale1Dxo9yhPjde69FhdX0Xyt7Qle//2d6OBqn+i1Qu2/MdBBAw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze202-187.delta" sparkle:deltaFrom="187" length="528874" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ONW5SY6eotoxKzBh4Q5Y94d+SP6y1rLlr5P2JJ/68XCsJ4wjIcfEBBjNfgHOxLzxGIX8ybf7kB+jVWJ3rZn8DA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.25</title>
@@ -53,37 +79,6 @@
 <li>Switching profiles no longer unlinks your fans, and an open fan curve no longer disappears when you switch.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.25.dmg" length="3605152" type="application/octet-stream" sparkle:edSignature="pAIO0/WX8JRy3E9D92OxBogoccAPW1LopAIVMWqi4p/fjLgWT0fb+FnazkxhnMYFQSP5px98ZdP/FoJhra4RAA=="/>
-        </item>
-        <item>
-            <title>1.0.24</title>
-            <pubDate>Wed, 04 Nov 2026 10:59:20 +0900</pubDate>
-            <sparkle:version>197</sparkle:version>
-            <sparkle:shortVersionString>1.0.24</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<h3>New</h3>
-<ul>
-<li>Safety now lists your recent Auto-Blast trips: when each one happened, which sensor caused it and how long it lasted. The list stays on your Mac. If you want help, you can open it as an email draft to support and send it yourself.</li>
-<li>Preferences has a Slow-down speed setting for Pro: how quickly fans come down in Sensor mode and after Blast. Speeding up is always instant.</li>
-</ul>
-<h3>Improved</h3>
-<ul>
-<li>When you quit MacBreeze, your fans go back to macOS within a few seconds. Auto-Blast runs only while MacBreeze is open.</li>
-<li>Fans stay at full speed when MacBreeze updates during a safety trip.</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>The main window opens when MacBreeze started in the background. Before, the button could do nothing.</li>
-<li>MacBreeze no longer tries to quit itself in the background when no window is showing.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.24.dmg" length="3580953" type="application/octet-stream" sparkle:edSignature="Iict6qdOVQMhk2C7nwIQxt7q1g3qipNzdHv5a6vr12zDmzOTDaKaihhdsOWlEvONjX0r54kSxEx7mN9LMrDeBQ=="/>
         </item>
     </channel>
 </rss>
