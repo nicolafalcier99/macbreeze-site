@@ -1,0 +1,18 @@
+<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Improved</h3>
+<ul>
+<li>A held press on the menu bar item now does one thing. The full panel stays open: slide to a button or a profile and let go. The short list that took the panel&#x27;s place after half a second is gone, because two different things on one long press was one too many.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>An app automation added while its app is already open now takes over at once. Before, it did nothing until that app was quit and opened again: no app icon in the menu bar, and your profile still shown as the one in charge.</li>
+<li>MacBreeze could quit by itself on macOS 27 after running for many hours. The cause was in how the menu bar item was drawn.</li>
+<li>A sensor reporting a nonsense value can no longer stop the app or the fan helper.</li>
+</ul>

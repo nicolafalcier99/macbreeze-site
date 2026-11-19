@@ -3,6 +3,39 @@
     <channel>
         <title>MacBreeze</title>
         <item>
+            <title>1.0.29</title>
+            <pubDate>Fri, 20 Nov 2026 01:12:22 +0900</pubDate>
+            <sparkle:version>211</sparkle:version>
+            <sparkle:shortVersionString>1.0.29</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<style>
+  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+  h3 { font-size: 13px; margin: 14px 0 6px; }
+  h3:first-child { margin-top: 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  p { margin: 6px 0; }
+</style>
+<h3>Improved</h3>
+<ul>
+<li>A held press on the menu bar item now does one thing. The full panel stays open: slide to a button or a profile and let go. The short list that took the panel&#x27;s place after half a second is gone, because two different things on one long press was one too many.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>An app automation added while its app is already open now takes over at once. Before, it did nothing until that app was quit and opened again: no app icon in the menu bar, and your profile still shown as the one in charge.</li>
+<li>MacBreeze could quit by itself on macOS 27 after running for many hours. The cause was in how the menu bar item was drawn.</li>
+<li>A sensor reporting a nonsense value can no longer stop the app or the fan helper.</li>
+</ul>]]></description>
+            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.29.dmg" length="3761718" type="application/octet-stream" sparkle:edSignature="aElNIkz8/eQYNnkvX5G/XLH7BMIQkbvMNZWeqzFEdOE4Sb2bA0iVBuwjAWxqfmkADjLdRZjIFgPTctw2muaTDw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze211-207.delta" sparkle:deltaFrom="207" length="339734" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Lm/8qy4stf/Nmt/n32Z1zFUQed/+xoy249LdvIIW3s72JaGEVFZ27eHKNg1lUsYtGbj9uED3LhVHmpEzOX6dCg=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze211-205.delta" sparkle:deltaFrom="205" length="417074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oOMc8bQ7nQ77HCTAdgzB/2gsvCQucGzciZXu6eBaozj+FUvUGkT88pT+sVB08/li56hdONqctSXcWDQMp7RICw=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze211-202.delta" sparkle:deltaFrom="202" length="457894" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9R2f1R7iq16/uk8dVex17Z3prMBB6Q65OlxWa5zrzS+bL70O/DSZqzXGXxSGLDekQScsTAXPxQy6glrlf0HpAQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze211-200.delta" sparkle:deltaFrom="200" length="541222" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="kahnP9GjKVdBzIyTsRKgTNt03KhpJnsO8vqow797K5JJzInKvAXt+5IweyiFjtLZyVRtQgP4cJPJfLYdwgMCBQ=="/>
+                <enclosure url="https://macbreeze.app/downloads/MacBreeze211-197.delta" sparkle:deltaFrom="197" length="582786" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0bnLVKaX1u9mI+U2JmQAtXhN++88tMc1lAZPG/xdDwW3QGgodBy2I9OgDLZsuliHxX8/YZH3IMZp9kaYhR4YDg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.28</title>
             <pubDate>Wed, 18 Nov 2026 21:24:21 +0900</pubDate>
             <sparkle:version>207</sparkle:version>
@@ -28,13 +61,6 @@
 <li>Right click on the menu bar item now lists your profiles too.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.28.dmg" length="3757213" type="application/octet-stream" sparkle:edSignature="XsovYGBMoBZq6S0fGSIO3cwA3a6AGFPYVxKF/TulxuqGGNTv7OozXsuu9RVgnpgFSWsSTJ2bN1gkF4qJc5FxAg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-205.delta" sparkle:deltaFrom="205" length="399434" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="aWBNYsSOHDw134jUy2/Pf1+5Mj4jyQ2+rxLiaZamV5Ae2SOGgg68EiwbCdE4BVF00UmLdsEBL5Tmnu9I26gIBQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-202.delta" sparkle:deltaFrom="202" length="459074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UPBKel6X0nEmNLOsAoih1vXs2Y/KfeMdVibQsZ+9OTUpFipKn1qvUDD845QNuxrAy0y+zRN31egraCTyNv2SDQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-200.delta" sparkle:deltaFrom="200" length="543158" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="r1/RuhcwCS6gZlPukrDmzoY/d7T5A+Riu8Ks9ujmBjbYmAgZMpJHvytuiwcgSdIylmUg4crOVLDc3/tXnBKMAw=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-197.delta" sparkle:deltaFrom="197" length="580370" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ESYw9ENccsVvK50Fb8Im7XG68vmabyC0w4n+mXzXjfNTEANzfZRG9EIWwR2wZKQYIA5/JcNTXN7HgMu17EwgAQ=="/>
-                <enclosure url="https://macbreeze.app/downloads/MacBreeze207-194.delta" sparkle:deltaFrom="194" length="656074" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vdWNCHMIQ+s3H4Bb5wCpdM+/VPJb1hJq1Er4tHg/8QbpFGPiCWGKwhJ61lMohWEFszK/rsY5A0TknH8jEQMtDg=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>1.0.27</title>
@@ -61,27 +87,6 @@
 <li>After an Auto-Blast safety trip, fans on a curve or a Manual speed ease down to that speed and stay there. Before, they eased all the way down to their minimum and were handed back to macOS, so for about half a minute they could run far below your curve. Under a steady heavy load that let the Mac heat up again and trip Auto-Blast again, over and over.</li>
 </ul>]]></description>
             <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.27.dmg" length="3674786" type="application/octet-stream" sparkle:edSignature="ZY3Se5DNdY1m0f7WLEEE+gNsQUwcu1nbCnxPVc8vQbfyKdn7qsFK8Wh/xTO7K8DaPWk88ZAhp/cp9OXny404Cg=="/>
-        </item>
-        <item>
-            <title>1.0.26</title>
-            <pubDate>Sun, 08 Nov 2026 14:40:01 +0900</pubDate>
-            <sparkle:version>202</sparkle:version>
-            <sparkle:shortVersionString>1.0.26</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<style>
-  body { font: -apple-system-body, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
-  h3 { font-size: 13px; margin: 14px 0 6px; }
-  h3:first-child { margin-top: 0; }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  p { margin: 6px 0; }
-</style>
-<h3>Improved</h3>
-<ul>
-<li>You can edit a profile while an app automation is running the fans. The automation stays in charge: your changes are saved to the profile without running, and take effect the next time the profile is active.</li>
-<li>If you change the profile that comes back when the automation&#x27;s app quits, it comes back with your new settings.</li>
-</ul>]]></description>
-            <enclosure url="https://macbreeze.app/downloads/MacBreeze-1.0.26.dmg" length="3652400" type="application/octet-stream" sparkle:edSignature="6/XXSlkOQCM74+4e120IIO9s379VaaCmDJ+kVNdvOWwyi16gWrvp80CeIz0R/vlSSKUSd5xwRI3cros6am+OAw=="/>
         </item>
     </channel>
 </rss>
